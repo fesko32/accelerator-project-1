@@ -1,4 +1,22 @@
-// Vendor
+/* VENDOR */
+// ---------------------------------
+@import "vendor/normalize";
 // ---------------------------------
 
-@import "vendor/normalize";
+/* GLOBAL */
+// ---------------------------------
+@import 'global/variables.scss';
+@import 'global/fonts.scss';
+@import 'global/global.scss';
+@import 'global/mixins.scss';
+@import 'global/visually-hidden.scss';
+// ---------------------------------
+
+/* BLOCKS */
+// ---------------------------------
+@import 'blocks/header.scss';
+@import 'blocks/container.scss';
+// ---------------------------------
+
+
+

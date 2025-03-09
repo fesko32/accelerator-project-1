@@ -1,0 +1,8 @@
+@mixin title($size, $weight, $lineHeigh){
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+  line-height: $lineHeigh;
+}
+

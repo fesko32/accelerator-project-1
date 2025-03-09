@@ -1,31 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html class="page" lang="ru" data-validate="html">
 
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUPERGYM</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
   <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="price">price</div>
-    <div data-test="games">games</div>
-    <div data-test="juri">juri</div>
-    <div data-test="features">features</div>
-    <div data-test="offers">offers</div>
-    <div data-test="faq">faq</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    <header class="hero" data-test="hero">
+      <div class="hero__inner-wrap container">
+        <div class="hero__header">
+          <img class="hero__logo" width="100" height="20" src="img/logo-desktop.svg" alt="Логотип сайта SUPERGYM" >
+          <a class="hero__tel-link" href="tel:+88005555555">8 800 555-55-55</a>
+        </div>
+
+        <div class="hero__content">
+          <div class="hero__text-area-wrap">
+            <ul class="hero__list">
+              <li class="hero__item">Тренажёрный зал</li>
+              <li class="hero__item">Групповые занятия</li>
+              <li class="hero__item">Кардио-зона</li>
+            </ul>
+            <h1 class="hero__title">Фитнес центр</h1>
+            <a class="hero__link" href="#price">Купить абонемент</a>
+          </div>
+          <div class="hero__image-wrap">
+            <picture>
+              <source media="(min-width: 1366px)" width="500" height="524" type="image/webp" srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/hero-tablet@1x.webp 1x, img/hero-tablet@1x.webp 2x" width="324" height="390">
+              <source media="(min-width: 1366px)" width="500" height="524" type="image/jpg" srcset="img/hero-desktop@1x.jpg 1x, img/hero-desktop@2x.jpg 2x">
+              <img class="hero__image" src="img/hero-tablet@1x.jpg" srcset="img/hero-tablet@2x.jpg 2x" width="324" height="390" alt="Изображение мужчины">
+            </picture>
+          </div>
+      </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="about" data-test="about">
+        <div class="about__inner-wrap container">
+          <h2 class="about__title">Тренажёрный зал</h2>
+          <h3 class="about__subtitle">Просторный зал площадью 900 кв/м</h3>
+          <p class="about__paragraph">Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+          <div class="about__image-wrap">
+            <!-- <img class="about__image" src="img/gum-mobile@1x.jpg" alt="Тренажёрный зал"> -->
+            <picture>
+              <source media="(min-width: 1366px)" width="660" height="400" type="image/webp" srcset="img/gum-desktop@1x.webp 1x, img/gum-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="678" height="345" type="image/webp"  srcset="img/gum-tablet@1x.webp 1x, img/gum-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/gum-mobile@1x.webp 1x, img/gum-mobile@2x.webp 2x" width="320" height="280">
+              <source media="(min-width: 1366px)" width="660" height="400" type="image/jpg" srcset="img/gum-desktop@1x.jpg 1x, img/gum-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="678" height="345" type="image/jpg" srcset="img/gum-tablet@1x.jpg 1x, img/gum-tablet@2x.jpg 2x">
+              <img class="about__image" src="img/gum-mobile@1x.jpg" srcset="img/gum-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажёрный зал">
+            </picture>
+
+            <div class="about__video-wrap">
+              <!-- <iframe class="about__video" src="https://www.youtube.com/watch?v=9TZXsZItgdw"
+              loading="lazy"
+              width="320"
+              height="170">
+            </iframe> -->
+            <button class="about__button" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="price" data-test="price">
+        <div class="price__inner-wrap container">
+          <h2 class="price__title">Абонементы</h2>
+        </div>
+      </section>
+      <section data-test="games">games</section>
+      <section data-test="juri">juri</section>
+      <section data-test="features">features</section>
+      <section data-test="offers">offers</section>
+      <section data-test="faq">faq</section>
+      <section data-test="reviews">reviews</section>
+      <section data-test="form">form</section>
+    </main>
+
+    <footer class="main-footer" data-test="footer">footer</footer>
     <script type="module" src="js/main.js"></script>
   </body>
 
