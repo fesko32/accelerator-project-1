@@ -14,7 +14,7 @@
     <header class="hero" data-test="hero">
       <div class="hero__inner-wrap container">
         <div class="hero__header">
-          <img class="hero__logo" width="100" height="20" src="img/logo-desktop.svg" alt="Логотип сайта SUPERGYM" >
+          <img class="hero__logo" width="100" height="20" src="img/logo-desktop.svg" alt="Логотип сайта SUPERGYM">
           <a class="hero__tel-link" href="tel:+88005555555">8 800 555-55-55</a>
         </div>
 
@@ -41,13 +41,13 @@
     </header>
 
     <main class="main-content">
+      <!-- SECTION-ABOUT -->
       <section class="about" data-test="about">
         <div class="about__inner-wrap container">
           <h2 class="about__title">Тренажёрный зал</h2>
           <h3 class="about__subtitle">Просторный зал площадью 900 кв/м</h3>
           <p class="about__paragraph">Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
           <div class="about__image-wrap">
-            <!-- <img class="about__image" src="img/gum-mobile@1x.jpg" alt="Тренажёрный зал"> -->
             <picture>
               <source media="(min-width: 1366px)" width="660" height="400" type="image/webp" srcset="img/gum-desktop@1x.webp 1x, img/gum-desktop@2x.webp 2x">
               <source media="(min-width: 768px)" width="678" height="345" type="image/webp"  srcset="img/gum-tablet@1x.webp 1x, img/gum-tablet@2x.webp 2x">
@@ -68,15 +68,223 @@
           </div>
         </div>
       </section>
+      <!-- SECTION-ABOUT -->
+
+      <!-- SECTION-PRICE -->
       <section class="price" data-test="price">
         <div class="price__inner-wrap container">
           <h2 class="price__title">Абонементы</h2>
+
+          <div class="price__subscriptions">
+            <!-- Табы -->
+            <div class="price__subscriptions-tabs" role="tablist">
+                <button class="price__subscriptions-tab" role="tab" aria-selected="true" data-duration="1">1 месяц</button>
+                <button class="price__subscriptions-tab" role="tab" aria-selected="false" data-duration="6">6 месяцев</button>
+                <button class="price__subscriptions-tab" role="tab" aria-selected="false" data-duration="12">12 месяцев</button>
+            </div>
+
+            <!-- Карточки абонементов -->
+            <ul class="price__subscriptions-cards">
+                <!-- Карточка 1 -->
+                <li class="price__subscriptions-card" role="tabpanel" aria-labelledby="card-1">
+                    <div class="price__subscriptions-content">
+                        <h3 class="price__subscriptions-title">С тренером</h3>
+                        <p class="price__subscriptions-price">5000 <span class="price__subscriptions-element">₽</span></p>
+                        <a class="price__subscriptions-button" href="#">Купить абонемент</a>
+                    </div>
+                </li>
+
+                <!-- Карточка 2 -->
+                <li class="price__subscriptions-card" role="tabpanel" aria-labelledby="card-2">
+                    <div class="price__subscriptions-content">
+                        <h3 class="price__subscriptions-title">Дневной</h3>
+                        <p class="price__subscriptions-price">1700 <span class="price__subscriptions-element">₽</span></p>
+                        <a class="price__subscriptions-button" href="#">Купить абонемент</a>
+                    </div>
+                </li>
+
+                <!-- Карточка 3 -->
+                <li class="price__subscriptions-card" role="tabpanel" aria-labelledby="card-3">
+                    <div class="price__subscriptions-content">
+                        <h3 class="price__subscriptions-title">Полный день</h3>
+                        <p class="price__subscriptions-price">2700 <span class="price__subscriptions-element">₽</span></p>
+                        <a class="price__subscriptions-button" href="#">Купить абонемент</a>
+                    </div>
+                </li>
+              </ul>
+          </div>
         </div>
       </section>
-      <section data-test="games">games</section>
-      <section data-test="juri">juri</section>
-      <section data-test="features">features</section>
-      <section data-test="offers">offers</section>
+      <!-- SECTION-PRICE -->
+
+      <!-- SECTION-GAMES -->
+      <section class="games" data-test="games">
+        <div class="games__inner-wrap container">
+          <div class="games__text-elements">
+            <h2 class="games__title">SUPER GAMES</h2>
+            <div class="games__date-wrap">
+              <h3 class="games__subtitle">Дата</h3>
+              <p class="games__paragraph">
+                <span class="games__number">7</span>
+                <div class="games__wrap-date">
+                  <span class="games__month">Март</span>
+                  <span class="games__year">2019</span>
+                </div>
+              </p>
+
+              <p class="games__paragraph">
+                <span class="games__time">Время</span>
+                <span class="games__number">12:00</span>
+              </p>
+            </div>
+            <p class="games__description">Ежегодные соревнования по&nbsp;CrossFit</p>
+            <a class="games__link" href="#"></a>
+          </div>
+          <picture>
+            <source media="(min-width: 1366px)" width="660" height="500" type="image/webp" srcset="img/game-photo-desktop@1x.webp 1x, img/game-photo-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="378" height="348" type="image/webp"  srcset="img/game-photo-tablet@1x.webp 1x, img/game-photo-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/game-photo-mobile@1x.webp, img/game-photo-mobile@1x.webp 2x" width="290" height="290">
+            <source media="(min-width: 1366px)" width="680" height="500" type="image/jpg" srcset="img/game-photo-desktop.jpg 1x, img/game-photo-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="378" height="348" type="image/jpg" srcset="img/game-photo-tablet@1x.jpg 1x, img/game-photo-tablet@2x.jpg 2x">
+            <img class="about__image" src="img/game-photo-mobile@1x.jpg" srcset="game-photo-mobile@2x.jpg 2x" width="290" height="290" alt="Фото плавца">
+          </picture>
+        </div>
+      </section>
+      <!-- SECTION-GAMES -->
+
+      <!-- SECTION-JURI -->
+      <section class="juri" data-test="juri">
+        <div class="juri__inner-wrap container">
+          <h2 class="juri__title">Жюри</h2>
+          <ul class="juri__list">
+            <li class="juri__item">
+              <img class="juri__image" width="260" height="300" src="img/card-1@1x.jpg" alt="Фоток жюри">
+              <h3 class="juri__subtitle">Анна Павлова</h3>
+            </li>
+            <li class="juri__item">
+              <img class="juri__image" width="260" height="300" src="img/card-2@1x.jpg" alt="Фоток жюри">
+              <h3 class="juri__subtitle">Алексей Лавров</h3>
+            </li>
+            <li class="juri__item">
+              <img class="juri__image" width="260" height="300" src="img/card-3@1x.jpg" alt="Фоток жюри">
+              <h3 class="juri__subtitle">Александр Пашков</h3>
+            </li>
+            <li class="juri__item">
+              <img class="juri__image" width="260" height="300" src="img/card-4@1x.jpg" alt="Фоток жюри">
+              <h3 class="juri__subtitle">Мария Кетова</h3>
+            </li>
+            <li class="juri__item">
+              <img class="juri__image" width="260" height="300" src="img/card-1@1x.jpg" alt="Фоток жюри">
+              <h3 class="juri__subtitle">Анна Павлова</h3>
+            </li>
+            <li class="juri__item">
+              <img class="juri__image" width="260" height="300" src="img/card-2@1x.jpg" alt="Фоток жюри">
+              <h3 class="juri__subtitle">Алексей Лавров</h3>
+            </li>
+            <li class="juri__item">
+              <img class="juri__image" width="260" height="300" src="img/card-3@1x.jpg" alt="Фоток жюри">
+              <h3 class="juri__subtitle">Александр Пашков</h3>
+            </li>
+            <li class="juri__item">
+              <img class="juri__image" width="260" height="300" src="img/card-4@1x.jpg" alt="Фоток жюри">
+              <h3 class="juri__subtitle">Мария Кетова</h3>
+            </li>
+          </ul>
+          <button type="juri__button"></button>
+        </div>
+      </section>
+      <!-- SECTION-JURI -->
+
+      <!-- SECTION-FEATURES -->
+      <section class="features" data-test="features">
+        <div class="features__inner-wrap container">
+          <h2 class="features__title">Наши преимущества</h2>
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="features__numbers-wrap">
+                <p class="features__element-namber">900</p>
+                <span class="features__element-subtitle">кв/м</span>
+              </div>
+              <h3 class="features__item-title">Площадь</h3>
+              <p class="features__item-paragraph">Занимайтесь без очередей и толкучки</p>
+            </li>
+
+            <li class="features__item">
+              <div class="features__numbers-wrap">
+                <p class="features__element-namber">70</p>
+                <span class="features__element-subtitle">машин</span>
+              </div>
+              <h3 class="features__item-title">Собственная парковка</h3>
+              <p class="features__item-paragraph">Вы&nbsp;всегда найдёте место для своей машины на&nbsp;нашей парковке</p>
+            </li>
+
+            <li class="features__item">
+              <div class="features__numbers-wrap">
+                <p class="features__element-namber">100</p>
+                <span class="features__element-subtitle">Тренажёров</span>
+              </div>
+              <p class="features__item-paragraph">Вы&nbsp;всегда найдёте место для своей машины на&nbsp;нашей парковке</p>
+            </li>
+
+            <li class="features__item">
+              <div class="features__numbers-wrap">
+                <p class="features__element-namber">350</p>
+                <span class="features__element-subtitle">мест</span>
+              </div>
+              <h3 class="features__item-title">Комфорт</h3>
+              <p class="features__item-paragraph">Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+            </li>
+
+            <li class="features__item">
+              <div class="features__numbers-wrap">
+                <p class="features__element-namber">5+</p>
+                <span class="features__element-subtitle">лет</span>
+              </div>
+              <h3 class="features__item-title">Тренерский опыт</h3>
+              <p class="features__item-paragraph">Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- SECTION-FEATURES -->
+
+      <!-- SECTION-OFFERS -->
+      <section class="offers" data-test="offers">
+        <div class="offers__inner-wrap container">
+          <h2 class="offers__title">Акции</h2>
+          <div class="offers__text-area">
+            <p class="offers__year">Год</p>
+            <p class="offers__price">4999</p>
+            <p class="offers__description">Безлимитный абонемент в&nbsp;тренажёрный зал</p>
+            <a class="offers__link" href="#">подробнее</a>
+          </div>
+
+          <picture>
+            <source media="(min-width: 1366px)" width="280" height="460" type="image/webp" srcset="img/action-desktop@1x.webp 1x, img/action-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="400" height="462" type="image/webp"  srcset="img/action-tablet@1x.webp 1x, img/action-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/action-mobile@1x.webp, img/action-mobile@1x.webp 2x" width="320" height="360">
+            <source media="(min-width: 1366px)" width="280" height="460" type="image/jpg" srcset="img/action-desktop@1x.jpg 1x, img/action-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="400" height="462" type="image/jpg" srcset="img/action-tablet@1x.jpg 1x, img/action-tablet@2x.jpg 2x">
+            <img class="about__image" src="img/action-mobile@1x.jpg" srcset="img/action-mobile@2x.jpg 2x" width="320" height="360" alt="Фото девушки">
+          </picture>
+
+          <ul class="offers__list">
+            <li class="offers__item">
+              <h3 class="offers__item-title">Месяц бесплатно</h3>
+              <p class="offers__item-paragraph">Приведи друга, получи абонемент в подарок</p>
+              <a class="offers__item-link" href="#">подробнее</a>
+            </li>
+
+            <li class="offers__item">
+              <h3 class="offers__item-title">Скидка 20%</h3>
+              <p class="offers__item-paragraph">Корпоративный фитнес с командой</p>
+              <a class="offers__item-link" href="#">подробнее</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- SECTION-OFFERS -->
+
       <section data-test="faq">faq</section>
       <section data-test="reviews">reviews</section>
       <section data-test="form">form</section>
