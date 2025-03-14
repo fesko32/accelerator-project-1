@@ -1,0 +1,64 @@
+.juri {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+.juri__inner-wrap {
+}
+.container {
+}
+.juri__title {
+  @include title(32px,600,100%);
+  font-family: $primary-font;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.juri__list {
+  margin: 0;
+  padding: 0;
+}
+.juri__item {
+  position: relative;
+  list-style: none;
+}
+
+.juri__info-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  padding: 45px 41px 51px 42px;
+  z-index: 1;
+}
+.juri__info {
+
+
+  li {
+    position: relative;
+    list-style: none;
+    color: $absolute-white;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+}
+.juri__image {
+  display: block;
+}
+.juri__subtitle {
+}
+.juri__info {
+}
+.visually-hidden {
+}
