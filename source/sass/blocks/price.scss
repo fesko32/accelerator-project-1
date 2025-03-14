@@ -1,0 +1,105 @@
+.price {
+  background-color: $additional-white;
+}
+
+.price__inner-wrap {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.price__title {
+  @include title(32px,600, 100%);
+  text-align: center;
+  font-family: $primary-font;
+  margin: 0 0 32px 0;
+}
+.price__subscriptions {
+}
+.price__subscriptions-tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(#787878, .2);
+  margin: 0 0 30px 0;
+}
+
+.price__subscriptions-tab {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: $primary;
+  border: none;
+  padding: 0 0 6px 0;
+  background-color: transparent;
+
+  &--current {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $red-02;
+    }
+  }
+}
+.price__subscriptions-cards {
+  display: flex;
+  gap: 35px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.price__subscriptions-card {
+  padding: 50px 42px 50px 42px;
+  list-style: none;
+  display: flex;
+
+
+  background-color: $absolute-white;
+}
+.price__subscriptions-content {
+}
+
+.price__subscriptions-title {
+  @include title(22px,700,100%);
+  margin: 0 0 18px 0;
+}
+
+.price__subscriptions-schedule {
+  margin: 0 0 18px;
+}
+
+.price__subscriptions-price {
+  position: relative;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  margin: 0 0 19px 0;
+  padding: 47px 0 0 0;
+  color: $additional-blue-01;
+  z-index: 1;
+
+
+}
+.price__subscriptions-element {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 150%;
+  color: rgba(#e8e8e8, 0.48);
+  z-index: -1;
+}
+.price__subscriptions-button {
+  text-decoration: none;
+  padding: 25px 48px 25px 47px;
+}
+.button-primary--disabled {
+}

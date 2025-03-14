@@ -1,0 +1,30 @@
+.button {
+  color: $absolute-white;
+  border: 2px solid $absolute-white;
+  outline: none;
+
+  &:hover, &:focus {
+    color: $additional-blue-01;
+    background-color: $absolute-white;
+    border-color: transparent;
+  }
+
+  &:focus {
+    border-color: $absolute-black;
+    background-color: rgba($absolute-white, 0.8);
+  }
+
+  &:active {
+    color: $primary;
+    border-color: transparent;
+    background-color: $absolute-white;
+
+
+  }
+
+  &--disabled {
+    outline: none;
+    opacity: 0.5;
+    border: 2px solid $absolute-white;
+  }
+}

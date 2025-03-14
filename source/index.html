@@ -11,12 +11,16 @@
   </head>
 
   <body class="page-body">
-    <header class="hero" id="hero" data-test="hero">
+    <div class="hero" id="hero" data-test="hero">
       <div class="hero__inner-wrap container">
-        <div class="hero__header">
-          <img class="hero__logo logo" width="100" height="20" src="img/logo-desktop.svg" alt="Логотип сайта SUPERGYM">
+        <header class="hero__header">
+          <a class="hero__logo" href="#">
+            <svg width="100" height="20">
+              <use href="/__spritemap#sprite-logo"></use>
+            </svg>
+          </a>
           <a class="hero__tel-link" href="tel:+88005555555">8 800 555-55-55</a>
-        </div>
+        </header>
 
         <div class="hero__content">
           <div class="hero__text-area-wrap">
@@ -25,9 +29,14 @@
               <li class="hero__item">Групповые занятия</li>
               <li class="hero__item">Кардио-зона</li>
             </ul>
-            <h1 class="hero__title">Фитнес центр</h1>
-            <a class="hero__link" href="#price">Купить абонемент</a>
+            <div class="hero__right-wrap">
+              <p class="hero__paragraph">Омск</p>
+              <h1 class="hero__title">Фитнес центр</h1>
+            </div>
+
+
           </div>
+          <a class="hero__link button" href="#price">Купить абонемент</a>
           <div class="hero__image-wrap">
             <picture>
               <source media="(min-width: 1366px)" width="500" height="524" type="image/webp" srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x">
@@ -38,34 +47,50 @@
           </div>
       </div>
       </div>
-    </header>
+    </div>
 
     <main class="main-content">
       <!-- SECTION-ABOUT -->
       <section class="about" id="about" data-test="about">
-        <div class="about__inner-wrap container">
-          <h2 class="about__title">Тренажёрный зал</h2>
-          <h3 class="about__subtitle">Просторный зал площадью 900 кв/м</h3>
-          <p class="about__paragraph">Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
-          <div class="about__image-wrap">
-            <picture>
-              <source media="(min-width: 1366px)" width="660" height="400" type="image/webp" srcset="img/gum-desktop@1x.webp 1x, img/gum-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)" width="678" height="345" type="image/webp"  srcset="img/gum-tablet@1x.webp 1x, img/gum-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/gum-mobile@1x.webp 1x, img/gum-mobile@2x.webp 2x" width="320" height="280">
-              <source media="(min-width: 1366px)" width="660" height="400" type="image/jpg" srcset="img/gum-desktop@1x.jpg 1x, img/gum-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" width="678" height="345" type="image/jpg" srcset="img/gum-tablet@1x.jpg 1x, img/gum-tablet@2x.jpg 2x">
-              <img class="about__image" src="img/gum-mobile@1x.jpg" srcset="img/gum-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажёрный зал">
-            </picture>
-
-            <div class="about__video-wrap">
-              <!-- <iframe class="about__video" src="https://www.youtube.com/watch?v=9TZXsZItgdw"
-              loading="lazy"
-              width="320"
-              height="170">
-            </iframe> -->
-            <button class="about__button" type="button"></button>
-            </div>
+        <div class="about__inner-wrap">
+          <div class="about__content container">
+            <h2 class="about__title">Тренажёрный зал</h2>
+            <h3 class="about__subtitle">Просторный зал площадью 900 кв/м</h3>
+            <p class="about__paragraph">Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием<br>для всех спортсменов.</p>
           </div>
+          <div class="about__media">
+            <div class="about__image-wrap">
+              <picture>
+                <source media="(min-width: 1366px)" width="660" height="400" type="image/webp" srcset="img/gum-desktop@1x.webp 1x, img/gum-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="678" height="345" type="image/webp"  srcset="img/gum-tablet@1x.webp 1x, img/gum-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gum-mobile@1x.webp 1x, img/gum-mobile@2x.webp 2x" width="320" height="280">
+                <source media="(min-width: 1366px)" width="660" height="400" type="image/jpg" srcset="img/gum-desktop@1x.jpg 1x, img/gum-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="678" height="345" type="image/jpg" srcset="img/gum-tablet@1x.jpg 1x, img/gum-tablet@2x.jpg 2x">
+                <img class="about__image" src="img/gum-mobile@1x.jpg" srcset="img/gum-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажёрный зал">
+              </picture>
+
+              <div class="about__video-wrap" >
+                <picture>
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/video-bg-desktop@1x.webp 1x, img/video-bg-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/video-bg-tablet@1x.webp 1x, img/video-bg-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 320px)" srcset="img/video-bg-mobile@1x.webp 1x, img/video-bg-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1366px)" srcset="img/video-bg-desktop@1x.jpg 1x, img/video-bg-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/video-bg-tablet@1x.jpg 1x, img/video-bg-tablet@2x.jpg 2x">
+                  <img src="img/video-bg-mobile@1x.jpg" srcset="img/video-bg-mobile@2x.jpg 2x" alt="Видео-презентация зала" width="320" height="170" loading="lazy">
+                </picture>
+
+                <button class="about__button" type="button" aria-label="play">
+                  <svg width="12" height="12" area-hidden="true">
+                    <use href="/__spritemap#sprite-icon-play"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+
         </div>
       </section>
       <!-- SECTION-ABOUT -->
@@ -78,8 +103,8 @@
           <div class="price__subscriptions">
             <!-- Табы -->
             <div class="price__subscriptions-tabs" role="tablist">
-                <button class="price__subscriptions-tab" role="tab" aria-selected="true" data-duration="1">1 месяц</button>
-                <button class="price__subscriptions-tab" role="tab" aria-selected="false" data-duration="6">6 месяцев</button>
+                <button class="price__subscriptions-tab price__subscriptions-tab--current" role="tab" aria-selected="true" data-duration="1">1 месяц</button>
+                <button class="price__subscriptions-tab " role="tab" aria-selected="false" data-duration="6">6 месяцев</button>
                 <button class="price__subscriptions-tab" role="tab" aria-selected="false" data-duration="12">12 месяцев</button>
             </div>
 
@@ -89,8 +114,17 @@
                 <li class="price__subscriptions-card" role="tabpanel" aria-labelledby="card-1">
                     <div class="price__subscriptions-content">
                         <h3 class="price__subscriptions-title">С тренером</h3>
-                        <p class="price__subscriptions-price">5000 <span class="price__subscriptions-element">₽</span></p>
-                        <a class="price__subscriptions-button" href="#">Купить абонемент</a>
+                        <p class="price__subscriptions-schedule">12 занятий</p>
+                        <p class="price__subscriptions-price">5000
+                          <span class="price__subscriptions-element">
+                            5000
+
+                          </span>
+                          <svg width="24" height="34" area-hidden="true">
+                            <use href="/__spritemap#sprite-ruble"></use>
+                          </svg>
+                        </p>
+                        <a class="price__subscriptions-button button-primary" href="#">Купить абонемент</a>
                     </div>
                 </li>
 
@@ -98,8 +132,16 @@
                 <li class="price__subscriptions-card" role="tabpanel" aria-labelledby="card-2">
                     <div class="price__subscriptions-content">
                         <h3 class="price__subscriptions-title">Дневной</h3>
-                        <p class="price__subscriptions-price">1700 <span class="price__subscriptions-element">₽</span></p>
-                        <a class="price__subscriptions-button" href="#">Купить абонемент</a>
+                        <p class="price__subscriptions-schedule">с 8:00 до 17:00</p>
+                        <p class="price__subscriptions-price">1700
+                          <span class="price__subscriptions-element">
+                            1700
+                          </span>
+                          <svg width="24" height="34" area-hidden="true">
+                            <use href="/__spritemap#sprite-ruble"></use>
+                          </svg>
+                        </p>
+                        <a class="price__subscriptions-button button-primary" href="#">Купить абонемент</a>
                     </div>
                 </li>
 
@@ -107,8 +149,16 @@
                 <li class="price__subscriptions-card" role="tabpanel" aria-labelledby="card-3">
                     <div class="price__subscriptions-content">
                         <h3 class="price__subscriptions-title">Полный день</h3>
-                        <p class="price__subscriptions-price">2700 <span class="price__subscriptions-element">₽</span></p>
-                        <a class="price__subscriptions-button" href="#">Купить абонемент</a>
+                        <p class="price__subscriptions-schedule">с 8:00 до 17:00</p>
+                        <p class="price__subscriptions-price">2700
+                           <span class="price__subscriptions-element">
+                            2700
+                           </span>
+                           <svg width="24" height="34" area-hidden="true">
+                            <use href="/__spritemap#sprite-ruble"></use>
+                          </svg>
+                        </p>
+                        <a class="price__subscriptions-button button-primary" href="#">Купить абонемент</a>
                     </div>
                 </li>
               </ul>
@@ -259,7 +309,7 @@
             <a class="offers__link" href="#">подробнее</a>
           </div>
 
-          <picture>
+          <picture class="visually-hidden">
             <source media="(min-width: 1366px)" width="280" height="460" type="image/webp" srcset="img/action-desktop@1x.webp 1x, img/action-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" width="400" height="462" type="image/webp"  srcset="img/action-tablet@1x.webp 1x, img/action-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/action-mobile@1x.webp, img/action-mobile@1x.webp 2x" width="320" height="360">
@@ -326,7 +376,7 @@
             </li>
             <li class="faq__content-item">
               <h3 class="faq__title-content">
-                Сколько тренеров работает в&nbsp;клубе и&nbsp;какова  их&nbsp;квалификация?
+                Сколько тренеров работает в&nbsp;клубе и&nbsp;какова их&nbsp;квалификация?
               </h3>
               <p class="faq__paragraph-content">
                 При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придёт вам на&nbsp;почту.
@@ -377,15 +427,15 @@
                 Предлагает&nbsp;ли клуб услуги по&nbsp;консультированию по&nbsp;вопросам питания?
               </h3>
               <p class="faq__paragraph-content">
-                Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит ваши данные, цели  и&nbsp;предложит программу питания.
+                Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит ваши данные, цели и&nbsp;предложит программу питания.
               </p>
             </li>
             <li class="faq__content-item">
               <h3 class="faq__title-content">
-                Проводятся&nbsp;ли в&nbsp;клубе какие-либо мероприятия  или соревнования?
+                Проводятся&nbsp;ли в&nbsp;клубе какие-либо мероприятия или соревнования?
               </h3>
               <p class="faq__paragraph-content">
-                Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит ваши данные, цели  и&nbsp;предложит программу питания.
+                Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит ваши данные, цели и&nbsp;предложит программу питания.
               </p>
             </li>
             <li class="faq__content-item">

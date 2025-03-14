@@ -1,0 +1,85 @@
+.hero {
+  background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+}
+.hero__inner-wrap {
+  padding-bottom: 32px;
+}
+
+.hero__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0 16px 0;
+  margin: 0 0 44px 0;
+}
+
+.hero__tel-link {
+  display: block;
+  width: 149px;
+  color: $absolute-white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+}
+
+.hero__paragraph {
+  color: $absolute-white;
+  margin: 0 0 14px;
+  @include title(32px,600,100%);
+  font-family: $primary-font;
+  align-self: flex-end;
+  justify-self: flex-end
+}
+
+.hero__title {
+  @include title(62px,800,100%);
+  font-family: $primary-font;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: $absolute-white;
+  margin: 0px -2px 0px 0px;
+
+}
+
+.hero__text-area-wrap {
+  display: flex;
+  text-align: right;
+  justify-content: space-between;
+  margin: 0 0 47px 0;
+}
+
+.hero__list {
+  min-width: 113px;
+  padding: 0;
+  margin: 0;
+  align-self: flex-end;
+}
+
+.hero__item {
+  list-style: none;
+  color: $absolute-white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+}
+
+.hero__link {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.hero__image-wrap {
+  display: none;
+}
