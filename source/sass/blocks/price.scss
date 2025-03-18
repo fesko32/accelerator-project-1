@@ -5,6 +5,28 @@
 .price__inner-wrap {
   padding-top: 40px;
   padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  @include vp-768 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+  }
+}
+
+.price__subscriptions {
+  padding: 0 15px 0 15px;
+  @include vp-768 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+  }
 }
 
 .price__title {
@@ -12,27 +34,38 @@
   text-align: center;
   font-family: $primary-font;
   margin: 0 0 32px 0;
+
+  @include vp-768 {
+    @include title(42px,600, 100%);
+    margin: 0 0 37px 0;
+  }
 }
-.price__subscriptions {
-}
+
 .price__subscriptions-tabs {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid rgba(#787878, .2);
   margin: 0 0 30px 0;
+
+  @include vp-768 {
+    width: 310px;
+    margin: 0 0 45px 0;
+  }
 }
 
 .price__subscriptions-tab {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
-  color: $primary;
+  color: rgba($primary, .5) ;
   border: none;
   padding: 0 0 6px 0;
   background-color: transparent;
+  cursor: pointer;
 
   &--current {
     position: relative;
+    color: $primary;
 
     &::after {
       content: "";
@@ -44,6 +77,10 @@
       background-color: $red-02;
     }
   }
+
+  @include vp-768 {
+    font-size: 18px;
+  }
 }
 .price__subscriptions-cards {
   display: flex;
@@ -54,25 +91,63 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 1;
+
+  @include vp-768 {
+    gap: 40px;
+  }
 }
+
 .price__subscriptions-card {
   padding: 50px 42px 50px 42px;
   list-style: none;
   display: flex;
-
-
+  flex-direction: column;
+  align-items: center;
   background-color: $absolute-white;
-}
-.price__subscriptions-content {
+
+  @include vp-768 {
+    width: 380px;
+    padding: 65px;
+  }
+
+  &:last-child {
+    @include vp-768 {
+      &::after {
+        content: "";
+        display: block;
+        width: 414px;
+        height: 392px;
+        position: relative;
+        position: absolute;
+        background-image: url("../../img/inventory-desktop@1x.png");
+        background-repeat: no-repeat;
+        background-size: 404px 425px;
+        bottom: -63px;
+        z-index: -1;
+        left: 249px;
+      }
+    }
+  }
 }
 
 .price__subscriptions-title {
   @include title(22px,700,100%);
   margin: 0 0 18px 0;
+
+  @include vp-768 {
+    @include title(24px,700,100%);
+    margin: 0 0 23px 0;
+  }
 }
 
 .price__subscriptions-schedule {
   margin: 0 0 18px;
+
+  @include vp-768 {
+    font-size: 16px;
+  }
 }
 
 .price__subscriptions-price {
@@ -85,21 +160,42 @@
   color: $additional-blue-01;
   z-index: 1;
 
+  @include vp-768 {
+    font-size: 60px;
+    margin: 0px 0 21px 0;
+    padding: 66px 0 0px 0;
+  }
 
+  svg {
+    @include vp-768 {
+      width: 30px;
+      height: 42px;
+    }
+  }
 }
+
 .price__subscriptions-element {
   position: absolute;
   top: 0;
-  left: 20px;
+  right: -14px;
   font-weight: 700;
   font-size: 80px;
   line-height: 150%;
   color: rgba(#e8e8e8, 0.48);
   z-index: -1;
+
+  @include vp-768 {
+    font-size: 100px;
+    left: -21px;
+    right: 0;
+  }
 }
+
 .price__subscriptions-button {
   text-decoration: none;
   padding: 25px 48px 25px 47px;
-}
-.button-primary--disabled {
+
+  @include vp-768 {
+    width: 100%;
+  }
 }

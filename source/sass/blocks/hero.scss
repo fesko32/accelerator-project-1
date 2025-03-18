@@ -1,15 +1,40 @@
 .hero {
   background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
 }
+
 .hero__inner-wrap {
   padding-bottom: 32px;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__inner-wrap{
+    padding-bottom: 93px;
+  }
 }
 
 .hero__header {
   display: flex;
   justify-content: space-between;
   padding: 16px 0 16px 0;
-  margin: 0 0 44px 0;
+  margin: 0px 0 48px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__header {
+    padding: 30px 0 30px 0;
+    margin: 0;
+  }
+}
+
+.hero__logo {
+  display: inline-flex;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__logo svg {
+    width: 110px;
+    height: 22px;
+  }
 }
 
 .hero__tel-link {
@@ -22,6 +47,13 @@
   line-height: 100%;
 }
 
+@media (min-width: $tablet-width) {
+  .hero__tel-link {
+    font-size: 24px;
+    width: auto;
+  }
+}
+
 .hero__paragraph {
   color: $absolute-white;
   margin: 0 0 14px;
@@ -31,6 +63,13 @@
   justify-self: flex-end
 }
 
+@media (min-width: $tablet-width) {
+  .hero__paragraph {
+    margin: -3px 0px 10px;
+    font-size: 42px;
+  }
+}
+
 .hero__title {
   @include title(62px,800,100%);
   font-family: $primary-font;
@@ -38,21 +77,46 @@
   letter-spacing: 0.02em;
   color: $absolute-white;
   margin: 0px -2px 0px 0px;
+}
 
+@media (min-width: $tablet-width) {
+  .hero__title {
+    font-size: 72px;
+    line-height: 118%;
+    margin: 0;
+  }
 }
 
 .hero__text-area-wrap {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
   text-align: right;
   justify-content: space-between;
-  margin: 0 0 47px 0;
+
+}
+
+@media (min-width: $tablet-width) {
+  .hero__text-area-wrap {
+    width: 325px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 0;
+    align-items: end;
+  }
 }
 
 .hero__list {
   min-width: 113px;
   padding: 0;
   margin: 0;
-  align-self: flex-end;
+  align-self: end;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__list {
+    height: 66px;
+    margin-bottom: 22px;
+  }
 }
 
 .hero__item {
@@ -64,7 +128,6 @@
 }
 
 .hero__link {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,8 +141,33 @@
   font-size: 12px;
   line-height: 100%;
   text-align: center;
+  margin-top: 48px;
+  grid-column: 1 / -1;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__link {
+    width: 184px;
+    grid-column: 2 / -1;
+    align-self: start;
+    justify-self: end;
+    margin-top: 48px;
+  }
 }
 
 .hero__image-wrap {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__image-wrap {
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .hero__content {
+    display: flex;
+    justify-content: space-between;
+  }
 }

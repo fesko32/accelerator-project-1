@@ -2,11 +2,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
 }
-.games__inner-wrap {
 
-}
-.container {
-}
 .games__wrap-elements {
   background-color: $red-01;
 }
@@ -16,12 +12,14 @@
   color: $absolute-white;
   margin: 0;
 }
+
 .games__data-wrap {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: start;
   padding: 40px;
 }
+
 .games__text-wrap {
   display: flex;
   flex-direction: column;
@@ -76,7 +74,7 @@
   font-size: 16px;
   line-height: 125%;
   color: $absolute-white;
-  margin: 16px 0 16px 0;
+  margin: 17px 0 16px 0;
 }
 .games__link {
   grid-column: 1 / -1;
@@ -89,7 +87,7 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 100%;
-  margin-bottom: 1px;
 }
-.about__image {
+.games__image {
+  display: block;
 }

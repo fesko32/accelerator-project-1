@@ -1,6 +1,12 @@
 .about__inner-wrap {
   padding: 40px 0 40px 0;
+
+  @include vp-768 {
+    padding: 60px 0 0 0;
+    text-align: center;
+  }
 }
+
 
 .about content p {
   line-height: 157%;
@@ -11,37 +17,92 @@
   @include title(32px,600,100%);
   font-family: $primary-font;
   margin: 0 0 12px 0;
+
+  @include vp-768 {
+    @include title(42px,600,100%);
+    margin: 0 0 20px 0;
+  }
 }
 
 .about__subtitle {
   @include title(18px,400,111%);
   margin: 0 0 36px 0;
+
+  @include vp-768 {
+    @include title(20px,600,100%);
+    margin: 0 0 36px 0;
+  }
 }
 
 .about__paragraph {
   margin: 0 0 36px 0;
+
+  @include vp-768 {
+    width: 502px;
+    margin: 0 auto 36px auto;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+
+    br {
+      display: none;
+    }
+  }
 }
 
-.about__image-wrap {
+.about__media {
   display: flex;
   flex-direction: column;
   gap: 36px;
+  @include vp-768 {
+    position: relative;
+    padding: 0 45px;
+    gap: 0;
+  }
+}
+
+.about__image-wrap {
+  @include vp-768 {
+    position: relative;
+    margin-bottom: -50px;
+  }
 }
 
 .about__image {
   display: block;
 }
+
 .about__video-wrap {
-  position: relative;
 
   img {
     display: block;
   }
 
+  @include vp-768 {
+    position: relative;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    transform: translateX(0) translateY(-50%);
+    padding: 0 204px;
+  }
+}
+
+.about__video-container {
+  @include vp-768 {
+    position: relative;
+  }
+}
+
+.about__wrapper {
+  position: relative;
+
   &::after {
     content: "";
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba($primary, 0.5);
@@ -75,7 +136,6 @@
     height: 72px;
     border-radius: 100%;
     border: 2px solid rgba($red-01, .2);
-
   }
 }
 

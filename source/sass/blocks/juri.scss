@@ -5,46 +5,91 @@
 
 
 .juri__inner-wrap {
+  padding: 0 30px;
 }
-.container {
-}
+
 .juri__title {
   @include title(32px,600,100%);
   font-family: $primary-font;
   text-align: center;
   margin: 0 0 20px 0;
 }
+
 .juri__list {
   margin: 0;
   padding: 0;
 }
+
+.juri__description {
+  color: $absolute-white;
+}
+
+.juri__description, .juri__info {
+  display: none;
+}
+
 .juri__item {
   position: relative;
   list-style: none;
+
+  &:focus {
+
+    .juri__info-wrap {
+      background-color: rgba($primary, 0.89);
+
+    }
+     .juri__description {
+      display: flex;
+    }
+
+     .juri__info {
+      display: flex;
+    }
+
+    .juri__subtitle {
+      margin: 0;
+    }
+  }
 }
 
 .juri__info-wrap {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
   top: 0;
-  padding: 45px 41px 51px 42px;
+  padding: 45px 41px 24px 42px;
   z-index: 1;
 }
-.juri__info {
 
+
+.juri__info {
+  display: none;
+  width: 160px;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
 
   li {
+
+    gap: 10px;
     position: relative;
     list-style: none;
     color: $absolute-white;
+    font-weight: 400;
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 157%;
 
 
-    &::after {
+
+    &::before {
       content: "";
       position: absolute;
-      top: 7px;
+      top: 8px;
       left: 0;
       width: 6px;
       height: 6px;
@@ -57,6 +102,9 @@
   display: block;
 }
 .juri__subtitle {
+  @include title(22px,400,100%);
+  margin: auto 0 0;
+  color: $absolute-white;
 }
 .juri__info {
 }
