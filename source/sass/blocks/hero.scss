@@ -85,7 +85,7 @@
     font-size: 72px;
     line-height: 118%;
     margin: 0;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.024em;
   }
 }
 
@@ -135,7 +135,7 @@
 
   &--mrg-bottom {
     @include vp-768 {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
   }
 }
