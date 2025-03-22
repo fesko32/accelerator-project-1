@@ -113,24 +113,30 @@
   }
 
   &:last-child {
-    @include vp-768 {
+
       &::after {
-        content: "";
-        display: block;
-        width: 414px;
-        height: 392px;
-        position: relative;
-        position: absolute;
-        background-image: url("../../img/inventory-desktop@1x.png");
-        background-repeat: no-repeat;
-        background-size: 404px 425px;
-        bottom: -63px;
-        z-index: -1;
-        left: 249px;
+        @include vp-768 {
+          content: "";
+          display: block;
+          width: 275px;
+          height: 328px;
+          position: absolute;
+          background-image: url("../../img/inventory-tablet@1x.png");
+          background-repeat: no-repeat;
+          bottom: 0px;
+          z-index: -1;
+          left: 305px;
+          transform: rotate(150deg);
+        }
+
+          @include vp-1366 {
+            width: 321px;
+            height: 387px;
+        }
       }
     }
   }
-}
+
 
 .price__subscriptions-title {
   @include title(22px,700,100%);
@@ -186,8 +192,9 @@
 
   @include vp-768 {
     font-size: 100px;
-    left: -21px;
+    left: -19px;
     right: 0;
+    top: 6px;
   }
 }
 

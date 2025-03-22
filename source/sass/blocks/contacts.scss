@@ -21,7 +21,6 @@
   @include title(20px,400,100%);
   font-style: normal;
   margin: 0 0 12px 0;
-
 }
 
 .contacts__paragraph {
@@ -32,6 +31,7 @@
 }
 
 .contacts__link {
+  font-weight: 400;
   color: $primary;
   text-decoration: none;
 }

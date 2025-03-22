@@ -50,6 +50,7 @@
     "w3c-html-validator": "1.7.0"
   },
   "dependencies": {
+    "pngjs": "^7.0.0",
     "swiper": "11.0.7"
   },
   "engines": {

@@ -1,10 +1,19 @@
 .games {
   padding-top: 25px;
   padding-bottom: 25px;
+
+  @include vp-768 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .games__wrap-elements {
   background-color: $red-01;
+
+  @include vp-768 {
+    display: flex;
+  }
 }
 .games__title {
   @include title(48px,600,112%);
@@ -28,6 +37,13 @@
   width: 56px;
   margin: 0;
   color:$absolute-white;
+
+  @include vp-768 {
+    justify-self: flex-start;
+    gap: 10px;
+    width: 100px;
+    margin-left: 10px;
+  }
   div {
     display: flex;
     flex-direction: column;
@@ -36,12 +52,16 @@
   dd {
     display: grid;
     grid-template-columns: repeat(2, min-content);
-    gap: 3px;
+    gap: 4px;
     margin: 0;
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
 
+    @include vp-768 {
+      align-items: center;
+      gap: 5px;
+    }
   }
 }
 
@@ -51,6 +71,11 @@
   font-size: 16px;
   line-height: 125%;
 
+  @include vp-768 {
+    font-size: 18px;
+    line-height: 133%;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -59,6 +84,10 @@
     width: 100%;
     height: 1px;
     background-color: $absolute-white;
+
+    @include vp-768 {
+      bottom: -2px;
+    }
   }
 }
 
@@ -66,15 +95,26 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
+
+  @include vp-768 {
+    font-size: 14px;
+    line-height: 157%;
+  }
 }
 
 .games__description {
   grid-column: 1 / -1;
   font-weight: 300;
   font-size: 16px;
-  line-height: 125%;
+  line-height: 127%;
   color: $absolute-white;
-  margin: 17px 0 16px 0;
+  margin: 16px 0 16px 0;
+
+  @include vp-768 {
+    font-size: 18px;
+    line-height: 133%;
+    margin: 9px 0 10px 0;
+  }
 }
 .games__link {
   grid-column: 1 / -1;
@@ -87,6 +127,11 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 100%;
+
+  @include vp-768 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 .games__image {
   display: block;

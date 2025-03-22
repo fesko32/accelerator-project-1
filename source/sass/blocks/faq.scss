@@ -44,7 +44,7 @@
 .faq__content-item {
   position: relative;
   text-align: left;
-  border-top: 1px solid $primary;
+  border-top: 1px solid #74819c;
   list-style: none;
   padding: 20px 0 20px 0;
 
@@ -95,7 +95,7 @@
   }
 
   &--active {
-    background-color: $primary;
+    background-color: $additional-blue-02;
 
     &::before,
     &::after {
