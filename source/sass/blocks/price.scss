@@ -56,15 +56,62 @@
 .price__subscriptions-tab {
   font-weight: 400;
   font-size: 16px;
+  position: relative;
   line-height: 100%;
-  color: rgba($primary, .5) ;
+  color: rgba($primary, .5);
   border: none;
   padding: 0 0 6px 0;
   background-color: transparent;
   cursor: pointer;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(#787878, .2);
+  }
+
+  &:hover {
+    color: rgba($primary, .7);
+
+    &::after {
+      background-color: #787878;
+    }
+  }
+
+  &:focus {
+    color: $primary;
+    outline: none;
+
+    &::after {
+      background-color: $primary;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: $red-01;
+    }
+  }
+
+  &:disabled {
+    color: rgba($primary, .3);
+
+    &:hover{
+      color: rgba($primary, .3);
+    }
+    &:hover::after {
+      background-color: rgba($primary, .3);
+    }
+    &:active {
+      background-color: transparent;
+    }
+  }
+
   &--current {
-    position: relative;
     color: $primary;
 
     &::after {

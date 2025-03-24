@@ -1,6 +1,11 @@
 .faq {
   padding-top: 70px;
   padding-bottom: 70px;
+
+  @include vp-768 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .faq__inner-wrap {
@@ -11,6 +16,11 @@
   @include title(32px,600,100%);
   font-family: $primary-font;
   margin: 0 0 35px 0;
+
+  @include vp-768 {
+    font-size: 42px;
+    margin: 0 0 45px 0;
+  }
 }
 
 .faq__tabs {
@@ -18,15 +28,27 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-bottom: 35px;
+
+  @include vp-768 {
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 45px;
+  }
 }
 
 .faq__tablink {
+  min-width: 140px;
   padding: 14px 23px;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   background-color: transparent;
   border: 1px solid rgba($primary, .2);
+
+  @include vp-768 {
+    min-width: 162px;
+    font-size: 18px;
+    padding: 17px 23px;
+  }
 
   &--current {
     color: $absolute-white;
@@ -48,10 +70,25 @@
   list-style: none;
   padding: 20px 0 20px 0;
 
+  @include vp-768 {
+    padding: 32px 0 32px 0;
+  }
+
   h3 {
     max-width: 238px;
     @include title(20px,400,100%);
     margin: 0;
+
+    @include vp-768 {
+      width: auto;
+      max-width: calc(678px - 40px);
+      font-weight: 400;
+      font-size: 22px;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   p {
@@ -60,6 +97,16 @@
     font-size: 16px;
     line-height: 125%;
     margin: 20px 0 0 0;
+
+    @include vp-768 {
+      width: 559px;
+      font-size: 18px;
+      line-height: 133%;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   &:last-child {

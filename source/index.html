@@ -197,7 +197,7 @@
             <!-- Табы -->
             <div class="price__subscriptions-tabs" role="tablist">
                 <button class="price__subscriptions-tab price__subscriptions-tab--current" role="tab" aria-selected="true" data-duration="1" type="button">1 месяц</button>
-                <button class="price__subscriptions-tab" role="tab" aria-selected="false" data-duration="6" type="button">6 месяцев</button>
+                <button class="price__subscriptions-tab" role="tab" aria-selected="false" data-duration="6" type="button" disabled>6 месяцев</button>
                 <button class="price__subscriptions-tab" role="tab" aria-selected="false" data-duration="12" type="button">12 месяцев</button>
             </div>
 
@@ -335,56 +335,78 @@
       <section class="juri" id="juri" data-test="juri">
         <div class="juri__inner-wrap container">
           <h2 class="juri__title">Жюри</h2>
-          <ul class="juri__list">
-            <li class="juri__item">
-              <img class="juri__image" width="260" height="300" src="img/card-1@1x.jpg" alt="Фоток жюри">
-              <div class="juri__info-wrap">
+
+          <div class="juri__slider-wrap">
+            <ul class="juri__list">
+              <li class="juri__item">
+                <img class="juri__image" width="260" height="300" src="img/card-1@1x.jpg" alt="Фоток жюри">
+                <div class="juri__info-wrap">
+                  <h3 class="juri__subtitle">Анна Павлова</h3>
+                  <p class="juri__description">CrossFit</p>
+                  <ul class="juri__info">
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="juri__item">
+                <img class="juri__image" width="260" height="300" src="img/card-2@1x.jpg" alt="Фоток жюри">
+                <div class="juri__info-wrap">
+                  <h3 class="juri__subtitle">Алексей Лавров</h3>
+                  <p class="juri__description">CrossFit</p>
+                  <ul class="juri__info">
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                  </ul>
+                </div>
+              </li>
+              <!-- <li class="juri__item">
+                <img class="juri__image" width="260" height="300" src="img/card-3@1x.jpg" alt="Фоток жюри">
+                <h3 class="juri__subtitle">Александр Пашков</h3>
+              </li> -->
+              <!-- <li class="juri__item">
+                <img class="juri__image" width="260" height="300" src="img/card-4@1x.jpg" alt="Фоток жюри">
+                <h3 class="juri__subtitle">Мария Кетова</h3>
+              </li>
+              <li class="juri__item">
+                <img class="juri__image" width="260" height="300" src="img/card-1@1x.jpg" alt="Фоток жюри">
                 <h3 class="juri__subtitle">Анна Павлова</h3>
-                <p class="juri__description">CrossFit</p>
-                <ul class="juri__info">
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                  <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
-                </ul>
-              </div>
-            </li>
-            <!-- <li class="juri__item">
-              <img class="juri__image" width="260" height="300" src="img/card-2@1x.jpg" alt="Фоток жюри">
-              <h3 class="juri__subtitle">Алексей Лавров</h3>
-            </li>
-            <li class="juri__item">
-              <img class="juri__image" width="260" height="300" src="img/card-3@1x.jpg" alt="Фоток жюри">
-              <h3 class="juri__subtitle">Александр Пашков</h3>
-            </li>
-            <li class="juri__item">
-              <img class="juri__image" width="260" height="300" src="img/card-4@1x.jpg" alt="Фоток жюри">
-              <h3 class="juri__subtitle">Мария Кетова</h3>
-            </li>
-            <li class="juri__item">
-              <img class="juri__image" width="260" height="300" src="img/card-1@1x.jpg" alt="Фоток жюри">
-              <h3 class="juri__subtitle">Анна Павлова</h3>
-            </li>
-            <li class="juri__item">
-              <img class="juri__image" width="260" height="300" src="img/card-2@1x.jpg" alt="Фоток жюри">
-              <h3 class="juri__subtitle">Алексей Лавров</h3>
-            </li>
-            <li class="juri__item">
-              <img class="juri__image" width="260" height="300" src="img/card-3@1x.jpg" alt="Фоток жюри">
-              <h3 class="juri__subtitle">Александр Пашков</h3>
-            </li>
-            <li class="juri__item">
-              <img class="juri__image" width="260" height="300" src="img/card-4@1x.jpg" alt="Фоток жюри">
-              <h3 class="juri__subtitle">Мария Кетова</h3>
-            </li> -->
-          </ul>
-          <!-- <button type="juri__button"></button> -->
+              </li>
+              <li class="juri__item">
+                <img class="juri__image" width="260" height="300" src="img/card-2@1x.jpg" alt="Фоток жюри">
+                <h3 class="juri__subtitle">Алексей Лавров</h3>
+              </li>
+              <li class="juri__item">
+                <img class="juri__image" width="260" height="300" src="img/card-3@1x.jpg" alt="Фоток жюри">
+                <h3 class="juri__subtitle">Александр Пашков</h3>
+              </li>
+              <li class="juri__item">
+                <img class="juri__image" width="260" height="300" src="img/card-4@1x.jpg" alt="Фоток жюри">
+                <h3 class="juri__subtitle">Мария Кетова</h3>
+              </li> -->
+            </ul>
+            <div class="juri__button-wrap">
+              <button class="juri__button juri__button--prev" type="button" aria-label="Предыдущий слайд">
+                  <svg width="18" height="34" viewBox="0 0 18 34">
+                    <use href="/__spritemap#sprite-arrow"></use>
+                  </svg>
+              </button>
+              <button class="juri__button juri__button--next" type="button" aria-label="Следующий слайд">
+                <svg width="18" height="34" viewBox="0 0 18 34">
+                  <use href="/__spritemap#sprite-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <!-- SECTION-JURI -->
 
       <!-- SECTION-FEATURES -->
       <section class="features" data-test="features">
-        <div class="features__inner-wrap">
+        <div class="features__inner-wrap container">
           <h2 class="features__title">Наши преимущества</h2>
           <ul class="features__list">
             <li class="features__item">
@@ -437,7 +459,7 @@
 
       <!-- SECTION-OFFERS -->
       <section class="offers" id="offers" data-test="offers">
-        <div class="offers__inner-wrap">
+        <div class="offers__inner-wrap container">
           <h2 class="offers__title">Акции</h2>
           <div class="offers__text-area">
             <h3>Год</h3>
@@ -521,9 +543,9 @@
           <!-- Содержимое вкладки -->
           <ul class="faq__content-list">
             <li class="faq__content-item">
-              <h3>Как стать членом<br>фитнес-центра?</h3>
+              <h3>Как стать членом <br>фитнес-центра?</h3>
               <p>
-                При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.<br>При покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придёт вам на&nbsp;почту.
+                При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор. <br>При покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придёт вам на&nbsp;почту.
               </p>
               <button class="faq__accordion-button faq__accordion-button--active" type="button">
                 <span class="visually-hidden">Кнопка открывает владку аккордиона</span>

@@ -1,16 +1,37 @@
 .offers {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @include vp-768 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .offers__inner-wrap {
   text-align: center;
+  padding: 0;
+  width: 100%;
+
+  @include vp-768 {
+    display: grid;
+    padding: 0 45px;
+    grid-template-columns: 278px 1fr;
+    row-gap: 35px;
+  }
 }
 
 .offers__title {
   @include title (32px,600,101%);
   font-family: $primary-font;
   margin: 0 0 40px 0;
+
+  @include vp-768 {
+    font-size: 42px;
+    margin: 0;
+    grid-column: 1 / -1;
+    text-align: center;
+  }
 }
 
 .offers__text-area {
@@ -26,18 +47,42 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 100%;
+
+    @include vp-768 {
+      font-size: 24px;
+      margin: 0 0 20px 1px;
+    }
   }
   span {
     margin: 0 0 28px 0;
     font-weight: 700;
     font-size: 64px;
     line-height: 100%;
+
+    @include vp-768 {
+      margin: 0 0 40px 0px;
+      font-size: 70px;
+    }
   }
   p {
     width: 260px;
     margin: 0 0 28px 0;
     font-size: 16px;
     line-height: 125%;
+
+    @include vp-768 {
+      width: auto;
+      margin: 0 0 auto 0;
+      font-size: 18px;
+      line-height: 133%;
+      text-align: left;
+    }
+  }
+
+  @include vp-768 {
+    align-items: flex-start;
+    padding: 40px 25px;
+    justify-content: flex-start;
   }
 }
 
@@ -50,6 +95,10 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  @include vp-768 {
+    padding-bottom: 5px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -58,12 +107,20 @@
     background-color: $absolute-white;
     bottom: -6px;
     left: 0;
+
+    @include vp-768 {
+      bottom: 0px;
+    }
   }
 }
 
 .offers__image {
   display: block;
   margin-bottom: 40px;
+
+  @include vp-768 {
+    margin: 0;
+  }
 }
 .offers__list {
   margin: 0;
@@ -71,6 +128,13 @@
   display: grid;
   row-gap: 30px;
   grid-template-columns: 1fr;
+
+  @include vp-768 {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    padding: 0;
+  }
 }
 .offers__item {
   padding: 20px;
@@ -79,12 +143,32 @@
   border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
   border-image-slice: 1;
 
+  @include vp-768 {
+    min-height: 188px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   h3 {
     @include title(22px,700,100%);
     margin: 0 0 20px 0;
+
+    @include vp-768 {
+      font-size: 26px;
+      margin: 0 0 10px;
+    }
   }
   p {
     margin: 0 0 18px 0;
+
+    @include vp-768 {
+      margin: 0 0 auto;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: left;
+    }
   }
 }
 
@@ -97,6 +181,11 @@
   text-decoration: none;
   color: $primary;
 
+  @include vp-768 {
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -105,5 +194,9 @@
     background-color: $primary;
     bottom: -3px;
     left: 0;
+
+    @include vp-768 {
+      bottom: 0;
+    }
   }
 }
