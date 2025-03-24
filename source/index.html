@@ -542,7 +542,7 @@
 
           <!-- Содержимое вкладки -->
           <ul class="faq__content-list">
-            <li class="faq__content-item">
+            <li class="faq__content-item faq__content-item--active">
               <h3>Как стать членом <br>фитнес-центра?</h3>
               <p>
                 При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор. <br>При покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придёт вам на&nbsp;почту.
@@ -701,73 +701,85 @@
       <section class="reviews" data-test="reviews">
         <div class="reviews__inner-wrap container">
           <h2 class="reviews__title">Отзывы</h2>
-          <ul class="reviews__slider-list">
-            <li class="reviews__slider-item">
-              <picture>
-                <source media="(min-width: 768px)"
-                  type="image/jpg"
-                  width="80"
-                  height="80"
-                  srcset="img/photo-author-comment-tablet@1x.jpg 1x, img/photo-author-comment-tablet@2x.jpg 2x"
-                >
-                <img src="img/photo-author-comment-mobile@1x.jpg"
-                  srcset="img/photo-author-comment-mobile@2x.jpg 2x"
-                  width="68"
-                  height="68"
-                  alt="Фото автора комментария"
-                >
-              </picture>
-              <h3>Анна Орлова</h3>
-              <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время <br>нет очередей&raquo;
-              </p>
-            </li>
-            <li class="reviews__slider-item visually-hidden">
-              <picture>
-                <source media="(min-width: 768px)"
-                  type="image/jpg"
-                  width="80"
-                  height="80"
-                  srcset="img/photo-author-comment-tablet@1x.jpg 1x, img/photo-author-comment-tablet@2x.jpg 2x"
-                >
-                <img src="img/photo-author-comment-mobile@1x.jpg"
-                  srcset="img/photo-author-comment-mobile@2x.jpg 2x"
-                  width="68"
-                  height="68"
-                  alt="Фото автора комментария"
-                >
-              </picture>
-              <h3>Анна Орлова</h3>
-              <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время <br> нет очередей&raquo;</p>
-            </li>
 
-            <li class="reviews__slider-item visually-hidden">
-              <picture>
-                <source media="(min-width: 768px)"
-                  type="image/jpg"
-                  width="80"
-                  height="80"
-                  srcset="img/photo-author-comment-tablet@1x.jpg 1x, img/photo-author-comment-tablet@2x.jpg 2x"
-                >
-                <img src="img/photo-author-comment-mobile@1x.jpg"
-                  srcset="img/photo-author-comment-mobile@2x.jpg 2x"
-                  width="68"
-                  height="68"
-                  alt="Фото автора комментария"
-                >
-              </picture>
-              <h3>Анна Орлова</h3>
-              <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время <br>нет очередей&raquo;</p>
-            </li>
-
-          </ul>
-          <div class="reviews__button-wrap">
-            <button class="reviews__button reviews__button--prev visually-hidden" type="button">
-              <span class="visually-hidden">Предыдущий слайд</span>
-            </button>
-            <button class="reviews__button reviews__button--next visually-hidden" type="button">
-              <span class="visually-hidden">Следующий слайд</span>
-            </button>
+          <div class="reviews__slider-wrap">
+            <ul class="reviews__slider-list">
+              <li class="reviews__slider-item">
+  
+                <picture>
+                  <source media="(min-width: 768px)"
+                    type="image/jpg"
+                    width="80"
+                    height="80"
+                    srcset="img/photo-author-comment-tablet@1x.jpg 1x, img/photo-author-comment-tablet@2x.jpg 2x"
+                  >
+                  <img src="img/photo-author-comment-mobile@1x.jpg"
+                    srcset="img/photo-author-comment-mobile@2x.jpg 2x"
+                    width="68"
+                    height="68"
+                    alt="Фото автора комментария"
+                  >
+                </picture>
+                <div class="reviews__text-wrap">
+                  <h3>Анна Орлова</h3>
+                  <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал&nbsp;просторный, даже в&nbsp;вечернее время <br>нет очередей&raquo;
+  
+                </div>
+                </p>
+              </li>
+              <li class="reviews__slider-item visually-hidden">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    type="image/jpg"
+                    width="80"
+                    height="80"
+                    srcset="img/photo-author-comment-tablet@1x.jpg 1x, img/photo-author-comment-tablet@2x.jpg 2x"
+                  >
+                  <img src="img/photo-author-comment-mobile@1x.jpg"
+                    srcset="img/photo-author-comment-mobile@2x.jpg 2x"
+                    width="68"
+                    height="68"
+                    alt="Фото автора комментария"
+                  >
+                </picture>
+                <h3>Анна Орлова</h3>
+                <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время <br> нет очередей&raquo;</p>
+              </li>
+  
+              <li class="reviews__slider-item visually-hidden">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    type="image/jpg"
+                    width="80"
+                    height="80"
+                    srcset="img/photo-author-comment-tablet@1x.jpg 1x, img/photo-author-comment-tablet@2x.jpg 2x"
+                  >
+                  <img src="img/photo-author-comment-mobile@1x.jpg"
+                    srcset="img/photo-author-comment-mobile@2x.jpg 2x"
+                    width="68"
+                    height="68"
+                    alt="Фото автора комментария"
+                  >
+                </picture>
+                <h3>Анна Орлова</h3>
+                <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время <br>нет очередей&raquo;</p>
+              </li>
+  
+            </ul>
+            <div class="button-slider">
+                <button class="button-slider__button button-slider__button--prev" type="button" aria-label="Предыдущий слайд">
+                    <svg width="18" height="34" viewBox="0 0 18 34">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                </button>
+                <button class="button-slider__button button-slider__button--next" type="button" aria-label="Следующий слайд">
+                  <svg width="18" height="34" viewBox="0 0 18 34">
+                    <use href="/__spritemap#sprite-arrow"></use>
+                  </svg>
+                </button>
+            </div>
           </div>
+    
         </div>
       </section>
       <!-- SECTION-REVIEWS -->
@@ -777,7 +789,7 @@
         <div class="form__inner-wrap">
           <div class="form__content container">
             <h2 class="form__title">Бесплатное занятие</h2>
-            <form action="https://echo.htmlacademy.ru" method="post">
+            <form class="form__main-form" action="https://echo.htmlacademy.ru" method="post">
               <div class="form__input-wrap">
                 <label class="form__label">
                   <span class="visually-hidden">Введите ваше имя</span>
@@ -794,29 +806,29 @@
           </div>
         </div>
         <div class="contacts">
+          <h2 class="contacts__title">Контакты</h2>
           <div class="contacts__inner-wrap container">
-            <h2 class="contacts__title">Контакты</h2>
 
-            <div class="contacts__row-wrap">
+            <div class="contacts__row-wrap contacts__row-wrap--address">
               <h3 class="contacts__subtitle">Адрес:</h3>
               <p class="contacts__paragraph">г. Омск, ул. 60 лет Октября, 7</p>
             </div>
 
-            <div class="contacts__row-wrap">
+            <div class="contacts__row-wrap contacts__row-wrap--schedule">
               <h3 class="contacts__subtitle">График работы:</h3>
               <p class="contacts__paragraph">Пн-Вс: с 8:00 до 22:00</p>
             </div>
 
-            <div class="contacts__row-wrap">
+            <div class="contacts__row-wrap contacts__row-wrap--number-phone">
               <h3 class="contacts__subtitle">Телефон:</h3>
               <a class="contacts__link" href="tel:88005555555" aria-label="Наш телефон">8 800 555-55-55</a>
             </div>
 
-            <div class="contacts__row-wrap">
+            <div class="contacts__row-wrap contacts__row-wrap--email">
               <h3 class="contacts__subtitle">Email:</h3>
               <a class="contacts__link" href="mailto:omsk@supergym.ru" aria-label="Наша почта">oмск@supergym.ru</a>
             </div>
-
+            
           </div>
         </div>
       </section>

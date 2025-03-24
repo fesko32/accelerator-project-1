@@ -5,22 +5,56 @@
   padding-top: 70px;
   padding-bottom: 70px;
   background-color: $primary;
+
+  @include vp-768 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
-.container {
+
+.form__content {
+  @include vp-768 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
 .form__title {
   @include title(32px,600,100%);
   font-family: $primary-font;
   color: $absolute-white;
   margin: 0 0 36px 0;
+
+  @include vp-768 {
+    font-size: 54px;
+    text-align: center;
+  }
+}
+
+.form__main-form {
+  @include vp-768 {
+    width: 440px;
+  }
+
 }
 .form__input-wrap {
   display: flex;
   flex-direction: column;
   gap: 36px;
   margin: 0 0 36px 0;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 0px 0 35px 0;
+  }
 }
 .form__label {
+  @include vp-768 {
+    width: 100%;
+  }
   &:hover {
     .form__input {
       border-bottom: 1px solid $absolute-white;
@@ -34,12 +68,8 @@
   &:focus-within{
     .form__input{
       border: 1px solid $absolute-white;
-
-
-
     }
   }
-
 }
 
 .form__input {
@@ -65,11 +95,8 @@
     color: rgba($absolute-black, .4);
     border-color: rgba(#74819C, .4);
   }
-
 }
 
-.visually-hidden {
-}
 .form__button {
   width: 100%;
   padding-top: 22px;
@@ -79,4 +106,8 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 100%;
+
+  @include vp-768 {
+    padding: 25px 0 25px 0;
+  }
 }

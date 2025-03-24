@@ -1,6 +1,11 @@
 .reviews {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @include vp-768 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .reviews__inner-wrap {
@@ -11,6 +16,22 @@
   @include title(32px,600,100%);
   font-family: $primary-font;
   margin: 0 0 40px;
+
+  @include vp-768 {
+    font-size: 54px;
+    margin: 0 0 34px;
+  }
+}
+
+.reviews__slider-wrap {
+  @include vp-768 {
+    position: relative;
+
+    .button-slider {
+      width: 105%;
+      left: -16px;
+    }
+  }
 }
 
 .reviews__slider-list {
@@ -23,7 +44,6 @@
 }
 
 .reviews__slider-item {
-  width: 240px;
   padding: 30px 25px;
   background-color: $additional-blue-02;
   display: flex;
@@ -31,6 +51,14 @@
   align-items: center;
   list-style: none;
   box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+
+  @include vp-768 {
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 39px 30px;
+    width: 500px;
+  }
 
   img {
     display: block;
@@ -40,14 +68,28 @@
 
   h3 {
     @include title(18px,400,111%);
-    margin: 0px 0 16px 0;
+    margin: 0 0 16px 0;
+
+    @include vp-768 {
+      text-align: left;
+      font-size: 22px;
+      margin: 0 0 19px 0;
+    }
   }
 
   p {
     width: 190px;
     margin: 0;
+
+    @include vp-768 {
+      text-align: left;
+      width: 320px;
+      font-size: 16px;
+      line-height: 150%;
+    }
   }
 }
 
+.reviews__text-wrap {
 
-
+}

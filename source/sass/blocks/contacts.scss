@@ -1,26 +1,100 @@
 .contacts {
   padding-top: 40px;
   padding-bottom: 38px;
+
+  @include vp-768 {
+    padding-top: 60px;
+    padding-bottom: 58px;
+  }
+}
+
+.contacts__inner-wrap {
+  @include vp-768 {
+    position: relative;
+    width: 440px;
+    padding: 0;
+    display: grid;
+    row-gap: 15px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+    "address phone-number"
+    "schedule email";
+    
+
+    &::after {
+      @include vp-768{
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        bottom: 0;
+        left: 50%;
+        background-color: #74819C;
+      }
+    }
+  }
 }
 
 .contacts__row-wrap {
   margin: 0 0 27px 0;
 
-  &:last-child {
+  @include vp-768 {
+    margin: 0;
+
+  }
+
+  &--address {
+    @include vp-768 {
+      grid-area: address;
+    }
+  }
+
+  &--schedule {
+    @include vp-768 {
+      grid-area: schedule;
+    }
+  }
+
+  &--number-phone {
+    @include vp-768 {
+      grid-area: phone-number;
+    }
+  }
+
+  &--email {
+    @include vp-768 {
+      grid-area: email;
+    }
+  }
+
+  &:last-child  {
     margin: 0;
   }
+
 }
 
 .contacts__title {
   @include title(32px,600,100%);
   font-family: $primary-font;
   margin: -3px 0 38px 0;
+
+  @include vp-768 {
+    font-size: 54px;
+    text-align: center;
+    grid-area: title;
+    margin: 0 0 38px 0;
+  }
 }
 
 .contacts__subtitle {
   @include title(20px,400,100%);
   font-style: normal;
   margin: 0 0 12px 0;
+
+  @include vp-768 {
+    font-size: 24px;
+    margin: 0 0 5px 0;
+  }
 }
 
 .contacts__paragraph {

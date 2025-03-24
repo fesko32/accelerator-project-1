@@ -70,14 +70,38 @@
   list-style: none;
   padding: 20px 0 20px 0;
 
-  @include vp-768 {
-    padding: 32px 0 32px 0;
+  &:last-child {
+    @include vp-768 {
+      padding: 23px 0 23px 0;
+
+      br {
+        display: block;
+      }
+    }
   }
+
+  @include vp-768 {
+        padding: 32px 0 32px 0;
+  }
+
+  &--active {
+    @include vp-768 {
+      padding: 32px 0 23px 0;
+    }
+
+    p {
+      margin: 20px 0 0 0;
+    }
+  }
+
+
 
   h3 {
     max-width: 238px;
     @include title(20px,400,100%);
     margin: 0;
+
+   
 
     @include vp-768 {
       width: auto;
@@ -87,16 +111,17 @@
 
       br {
         display: none;
+       }
       }
-    }
   }
+  
 
   p {
     width: 238px;
     font-weight: 300;
     font-size: 16px;
     line-height: 125%;
-    margin: 20px 0 0 0;
+    
 
     @include vp-768 {
       width: 559px;
@@ -127,6 +152,12 @@
   border-radius: 100%;
   background-color: transparent;
 
+  @include vp-768 {
+    width: 40px;
+    height: 40px;
+    top: 23px;
+  }
+
   &::after,
   &::before {
     content: "";
@@ -135,6 +166,12 @@
     width: 14px;
     height: 1px;
     background-color: $primary;
+
+    @include vp-768 {
+      width: 20px;
+      left: 9px;
+      top: 50%;
+    }
   }
 
   &::after {
@@ -156,5 +193,9 @@
 
   &--crct-position {
     top: 35px;
+
+    @include vp-768 {
+      top: 24px;
+    }
   }
 }
