@@ -5,12 +5,35 @@
     padding: 60px 0 0 0;
     text-align: center;
   }
+
+  @include vp-1366 {
+    padding: 120px 0 0 0;
+    display: flex;
+    text-align: left;
+  }
 }
 
 
-.about content p {
-  line-height: 157%;
+.about__content p {
   margin: 0 0 36px 0;
+
+  @include vp-768 {
+    width: 502px;
+    margin: 0 auto 36px auto;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include vp-1366 {
+    text-align: left;
+  }
+ 
 }
 
 .about__title {
@@ -35,20 +58,7 @@
 }
 
 .about__paragraph {
-  margin: 0 0 36px 0;
-
-  @include vp-768 {
-    width: 502px;
-    margin: 0 auto 36px auto;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-
-    br {
-      display: none;
-    }
-  }
+ 
 }
 
 .about__media {
@@ -57,7 +67,6 @@
   gap: 36px;
   @include vp-768 {
     position: relative;
-    padding: 0 45px;
     gap: 0;
   }
 }
