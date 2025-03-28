@@ -3,13 +3,12 @@
   margin: 0 auto;
   padding: 0 15px;
 
-  @media (min-width:$tablet-width) {
+  @include vp-768 {
     width: $tablet-width;
     padding: 0 45px;
   }
 
-
-  @media (min-width:$desktop-width) {
+  @include vp-1366 {
     width: $desktop-width;
     padding: 0 103px;
   }

@@ -3,18 +3,19 @@
 }
 
 .price__inner-wrap {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0 40px 0;
   position: relative;
   overflow: hidden;
   @include vp-768 {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0 60px 0;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+  }
 
+  @include vp-1366 {
+    padding: 100px 0 100px 0;
   }
 }
 
@@ -36,20 +37,32 @@
   margin: 0 0 32px 0;
 
   @include vp-768 {
-    @include title(42px,600, 100%);
+    font-size: 42px;
     margin: 0 0 37px 0;
   }
+
+  @include vp-1366 {
+    font-size: 54px;
+    margin: 0 0 20px 0;
+  }
+
 }
 
 .price__subscriptions-tabs {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid rgba(#787878, .2);
-  margin: 0 0 30px 0;
+  margin: 0 auto 30px;
+  width: 290px;
 
   @include vp-768 {
     width: 310px;
     margin: 0 0 45px 0;
+  }
+
+  @include vp-1366 {
+    width: 350px;
+    margin: 0 0 40px 0;
   }
 }
 
@@ -60,25 +73,36 @@
   line-height: 100%;
   color: rgba($primary, .5);
   border: none;
-  padding: 0 0 6px 0;
+  border-bottom: 1px solid transparent;
+  padding: 0 1px 6px 0;
   background-color: transparent;
   cursor: pointer;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -2px;
+    bottom: -3px;
     left: 0;
     width: 100%;
-    height: 2px;
-    background-color: rgba(#787878, .2);
+    border-bottom: 2px solid transparent;
+  }
+
+  @include vp-768 {
+    font-size: 18px;
+  }
+
+  @include vp-1366 {
+    font-size: 20px;
   }
 
   &:hover {
     color: rgba($primary, .7);
 
+    &:disabled::after {
+      border-bottom: 2px solid rgba($primary, .3);
+    }
     &::after {
-      background-color: #787878;
+      border-bottom: 2px solid #787878;;
     }
   }
 
@@ -91,21 +115,13 @@
     }
   }
 
-  &:active {
-    &::after {
-      background-color: $red-01;
-    }
-  }
-
   &:disabled {
     color: rgba($primary, .3);
 
-    &:hover{
+    &:hover {
       color: rgba($primary, .3);
     }
-    &:hover::after {
-      background-color: rgba($primary, .3);
-    }
+
     &:active {
       background-color: transparent;
     }
@@ -117,17 +133,14 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -2px;
+      bottom: -3px;
       left: 0;
       width: 100%;
-      height: 2px;
-      background-color: $red-02;
+      border-bottom: 2px solid $red-01;
     }
   }
 
-  @include vp-768 {
-    font-size: 18px;
-  }
+
 }
 .price__subscriptions-cards {
   display: flex;
@@ -141,8 +154,38 @@
   position: relative;
   z-index: 1;
 
+  &::after {
+    @include vp-768 {
+      content: "";
+      display: block;
+      width: 275px;
+      height: 328px;
+      position: absolute;
+      background-image: url("../../img/inventory-tablet@1x.png");
+      background-repeat: no-repeat;
+      bottom: -49px;
+      z-index: -1;
+      left: 314px;
+      transform: rotate(150deg);
+    }
+
+      @include vp-1366 {
+        width: 321px;
+        height: 387px;
+        background-image: url("../../img/inventory-desktop@1x.png");
+        bottom: -93px;
+        z-index: -1;
+        right: -196px;
+        left: auto;
+    }
+  }
+
   @include vp-768 {
     gap: 40px;
+  }
+
+  @include vp-1366 {
+    flex-direction: row;
   }
 }
 
@@ -154,33 +197,13 @@
   align-items: center;
   background-color: $absolute-white;
 
-  @include vp-768 {
-    width: 380px;
-    padding: 65px;
-  }
+    @include vp-768 {
+      width: 380px;
+      padding: 65px;
+    }
 
-  &:last-child {
-
-      &::after {
-        @include vp-768 {
-          content: "";
-          display: block;
-          width: 275px;
-          height: 328px;
-          position: absolute;
-          background-image: url("../../img/inventory-tablet@1x.png");
-          background-repeat: no-repeat;
-          bottom: -49px;
-          z-index: -1;
-          left: 314px;
-          transform: rotate(150deg);
-        }
-
-          @include vp-1366 {
-            width: 321px;
-            height: 387px;
-        }
-      }
+    @include vp-1366 {
+      width: 360px;
     }
   }
 
@@ -190,8 +213,13 @@
   margin: 0 0 18px 0;
 
   @include vp-768 {
-    @include title(24px,700,100%);
+    font-size: 24px;
     margin: 0 0 23px 0;
+  }
+
+  @include vp-1366 {
+    font-size: 26px;
+    margin: 0 0 18px 0;
   }
 }
 
@@ -200,6 +228,10 @@
 
   @include vp-768 {
     font-size: 16px;
+  }
+
+  @include vp-1366 {
+    margin: 0px 0 17px;
   }
 }
 
@@ -217,6 +249,11 @@
     font-size: 60px;
     margin: 0px 0 21px 0;
     padding: 66px 0 0px 0;
+  }
+
+  @include vp-1366 {
+    margin: 0px 0 17px 0;
+    padding: 62px 0 0px 0;
   }
 
   svg {

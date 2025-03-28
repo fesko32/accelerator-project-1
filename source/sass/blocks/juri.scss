@@ -3,8 +3,11 @@
   padding-bottom: 40px;
 
   @include  vp-768 {
-    padding-top: 30px;
-    padding-bottom: 60px;
+    padding: 30px 0 60px 0;
+  }
+
+  @include vp-1366 {
+    padding: 100px 0 100px 0;
   }
 }
 
@@ -139,6 +142,10 @@
   transform: translateX(0) translateY(-50%);
   width: 100%;
   justify-content: space-between;
+
+  @include vp-1366 {
+    top: 49%;
+  }
 }
 
 .juri__button {

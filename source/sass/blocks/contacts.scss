@@ -1,10 +1,26 @@
-.contacts {
+.form__info-contacts {
   padding-top: 40px;
   padding-bottom: 38px;
 
   @include vp-768 {
     padding-top: 60px;
     padding-bottom: 58px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include vp-1366 {
+    width: 50%;
+    padding: 0;
+  }
+}
+
+.form__info-contacts-container {
+  @include vp-1366 {
+    width: 100%;
+    max-width: 683px;
+    padding: 60px 103px 71px 103px;
+    margin: 0 auto 0 0;
   }
 }
 
@@ -19,7 +35,8 @@
     grid-template-areas:
     "address phone-number"
     "schedule email";
-    
+    margin: 0 auto;
+
 
     &::after {
       @include vp-768{
@@ -32,6 +49,13 @@
         background-color: #74819C;
       }
     }
+  }
+
+  @include vp-1366 {
+    width: 477px;
+    padding: 0;
+    margin: 0;
+    column-gap: 62px;
   }
 }
 
@@ -70,7 +94,6 @@
   &:last-child  {
     margin: 0;
   }
-
 }
 
 .contacts__title {
@@ -83,6 +106,10 @@
     text-align: center;
     grid-area: title;
     margin: 0 0 38px 0;
+  }
+
+  @include vp-1366 {
+    text-align: left;
   }
 }
 

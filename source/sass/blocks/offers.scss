@@ -1,23 +1,62 @@
 .offers {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0 40px 0;
 
   @include vp-768 {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0 60px 0;
+  }
+
+  @include vp-1366 {
+    padding: 100px 0 100px 0;
   }
 }
 
 .offers__inner-wrap {
   text-align: center;
+  width: 100%;
   padding: 0;
+
+
+  @include vp-768 {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include vp-1366 {
+
+  }
+}
+
+.offers__content-wrap {
   width: 100%;
 
   @include vp-768 {
-    display: grid;
-    padding: 0 45px;
-    grid-template-columns: 278px 1fr;
-    row-gap: 35px;
+    width: 678px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  @include vp-1366 {
+    width: 1160px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+.offers__promo-wrap {
+  background-color: $red-01;
+
+  @include vp-768 {
+    width: 678px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include vp-1366 {
+    width: 560px;
   }
 }
 
@@ -28,9 +67,14 @@
 
   @include vp-768 {
     font-size: 42px;
-    margin: 0;
+    margin: 0 0 35px 0;
     grid-column: 1 / -1;
     text-align: center;
+  }
+
+  @include vp-1366 {
+    font-size: 54px;
+    margin: 0 0 70px 0;
   }
 }
 
@@ -39,7 +83,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $red-01;
   color: $absolute-white;
 
   h3 {
@@ -81,7 +124,7 @@
 
   @include vp-768 {
     align-items: flex-start;
-    padding: 40px 25px;
+    padding: 40px 46px;
     justify-content: flex-start;
   }
 }
@@ -130,10 +173,16 @@
   grid-template-columns: 1fr;
 
   @include vp-768 {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
+    grid-template-columns: repeat(2, 324px);
     padding: 0;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  @include vp-1366 {
+    grid-template-columns: repeat(1, auto);
+    grid-column: 2 / -1;
+    align-self: end;
   }
 }
 .offers__item {
@@ -144,11 +193,17 @@
   border-image-slice: 1;
 
   @include vp-768 {
+    width: 324px;
     min-height: 188px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  @include vp-1366 {
+    width: 560px;
+    min-height: 174px
   }
 
   h3 {

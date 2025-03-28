@@ -6,6 +6,10 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
+  @include vp-1366 {
+    padding: 100px 0 100px 0;
+  }
 }
 
 .games__wrap-elements {
@@ -20,6 +24,11 @@
   font-family: $primary-font;
   color: $absolute-white;
   margin: 0;
+
+  @include vp-1366 {
+    font-size: 82px;
+    line-height: 117%;
+  }
 }
 
 .games__data-wrap {
@@ -27,6 +36,11 @@
   grid-template-columns: repeat(2, 1fr);
   justify-items: start;
   padding: 40px;
+
+  @include vp-1366 {
+    padding: 60px 80px 98px 80px;
+    align-items: flex-start;
+  }
 }
 
 .games__text-wrap {
@@ -44,6 +58,12 @@
     width: 100px;
     margin-left: 10px;
   }
+
+  @include vp-1366 {
+    margin-left: 77px;
+    width: 95px;
+    gap: 18px;
+  }
   div {
     display: flex;
     flex-direction: column;
@@ -51,6 +71,10 @@
 
     @include vp-768 {
       gap: 4px;
+    }
+
+    @include vp-1366 {
+      gap: 13px;
     }
   }
   dd {
@@ -62,14 +86,19 @@
     font-size: 24px;
     line-height: 100%;
 
+
     @include vp-768 {
       align-items: center;
       gap: 5px;
     }
+
+    @include vp-1366 {
+      font-size: 40px;
+    }
   }
 }
 
-.games__deskription-title {
+.games__description-title {
   position: relative;
   font-weight: 300;
   font-size: 16px;
@@ -92,6 +121,10 @@
     @include vp-768 {
       bottom: -2px;
     }
+
+    @include vp-1366 {
+      bottom: -6px;
+    }
   }
 }
 
@@ -103,6 +136,11 @@
   @include vp-768 {
     font-size: 14px;
     line-height: 157%;
+  }
+
+  @include vp-1366 {
+    line-height: 24px;
+    margin: -4px 0 0px 0px;
   }
 }
 
@@ -118,6 +156,10 @@
     font-size: 18px;
     line-height: 133%;
     margin: 9px 0 10px 0;
+  }
+
+  @include vp-1366 {
+    margin: 28px 0 31px 0;
   }
 }
 .games__link {
