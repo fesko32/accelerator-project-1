@@ -135,4 +135,9 @@
   font-weight: 400;
   color: $primary;
   text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: $additional-blue-01;
+  }
 }

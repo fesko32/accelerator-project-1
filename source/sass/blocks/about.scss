@@ -204,6 +204,7 @@
   border: none;
   background: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
   cursor: pointer;
+  transition: $transition;
 
   &:hover {
     background: $absolute-white;

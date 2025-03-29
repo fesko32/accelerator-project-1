@@ -2,6 +2,7 @@
   color: $absolute-white;
   border: 2px solid $absolute-white;
   outline: none;
+  transition: $transition;
 
   &:hover, &:focus {
     color: $additional-blue-01;

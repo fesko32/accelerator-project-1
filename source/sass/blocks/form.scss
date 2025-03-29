@@ -100,6 +100,7 @@
   border: 1px solid transparent;
   border-bottom: 1px solid #74819C;
   outline: none;
+  transition: $transition;
 
   &::placeholder {
     font-weight: 300;

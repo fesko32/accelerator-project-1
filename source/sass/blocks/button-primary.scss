@@ -9,6 +9,7 @@
   border: 2px solid $primary;
   background-color: transparent;
   cursor: pointer;
+  transition: $transition;
 
   &:hover {
     border: 2px solid transparent;

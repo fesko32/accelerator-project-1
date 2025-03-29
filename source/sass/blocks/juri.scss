@@ -11,13 +11,15 @@
   }
 }
 
-
 .juri__inner-wrap {
   padding: 0 30px;
+  position: relative;
+  @include vp-768 {
+    padding: 0 105px;
+  }
 }
 
 .juri__slider-wrap {
-
   @include vp-768 {
     position: relative;
   }
@@ -38,14 +40,10 @@
 .juri__list {
   margin: 0;
   padding: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @include vp-768 {
-    gap: 40px;
-  }
 }
 
 .juri__description {
@@ -90,6 +88,7 @@
   top: 0;
   padding: 45px 41px 24px 42px;
   z-index: 1;
+  transition: $transition;
 }
 
 
@@ -102,7 +101,6 @@
   padding: 0;
 
   li {
-
     gap: 10px;
     position: relative;
     list-style: none;
@@ -138,13 +136,16 @@
 .juri__button-wrap {
   display: flex;
   position: absolute;
-  top: 50%;
+  top: 62%;
   transform: translateX(0) translateY(-50%);
-  width: 100%;
+  z-index: 1;
+  left: 34px;
   justify-content: space-between;
+  width: 700px;
 
   @include vp-1366 {
-    top: 49%;
+    top: 62%;
+    width: 95%;
   }
 }
 
@@ -187,4 +188,20 @@
     }
   }
 }
+
+
+.swiper {
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.juri__list.swiper-wrapper {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+
 

@@ -33,6 +33,7 @@
 
 .hero__logo {
   display: inline-flex;
+  transition: $transition;
 
   svg {
     @include vp-768 {
@@ -45,6 +46,12 @@
       height: 26px;
     }
   }
+
+  &:hover {
+    svg {
+      opacity: .4;
+    }
+  }
 }
 
 .hero__tel-link {
@@ -55,6 +62,56 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 100%;
+  position: relative;
+
+  &::after  {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $primary;
+    bottom: -6px;
+    left: 0;
+    display: none;
+  }
+
+  &:hover {
+    color: rgba($additional-blue-02, .5);
+  }
+
+  &:focus {
+    outline: none;
+    color: $additional-blue-02;
+  }
+
+  &:active {
+    color: $primary;
+  }
+
+  &:active::after  {
+      display: block;
+  }
+
+  &--disabled {
+    color: rgba(#F8F9FC, .5);
+
+    &:hover {
+      color: rgba(#F8F9FC, .5);
+    }
+
+    &:focus {
+      outline: none;
+      color: rgba(#F8F9FC, .5);
+    }
+
+    &:active {
+      color: rgba(#F8F9FC, .5);
+    }
+
+    &:active::after  {
+        display: none;
+    }
+  }
 
   @include vp-768 {
     font-size: 24px;

@@ -18,14 +18,15 @@
     border: 1px solid transparent;
     border-radius: 100%;
     stroke: $primary;
-  
+    transition: $transition;
+
     @include vp-768 {
       display: flex;
-  
+
       &--next {
         transform: rotate(-180deg);
       }
-  
+
       &:hover, &:focus {
         border-color: $primary;
         outline: none;
@@ -33,12 +34,12 @@
       &:focus {
         background-color: #e8e8e8;
       }
-  
+
       &:active {
         stroke: $absolute-white;
         background-color: $primary;
       }
-  
+
       &:disabled {
         stroke: rgba($primary, .3);
         border: none;
@@ -46,5 +47,4 @@
       }
     }
   }
-  
-  
+

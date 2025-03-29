@@ -68,6 +68,7 @@
   background-color: transparent;
   border: 1px solid rgba($primary, .2);
   cursor: pointer;
+  transition: $transition;
 
   @include vp-768 {
     min-width: 162px;
@@ -79,10 +80,24 @@
     width: 100%;
   }
 
+  &:hover {
+    border-color: $additional-blue-02;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $additional-blue-02;
+  }
+
+  &:disabled {
+    color:C8C9CC;
+    border-color: rgba($additional-blue-02, .2);
+  }
+
   &--current {
     color: $absolute-white;
-    background-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
-    border-image-source: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    background-image: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
+    border-image-source: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
     border-image-slice: 1;
   }
 }
@@ -202,6 +217,7 @@
   border-radius: 100%;
   background-color: transparent;
   cursor: pointer;
+  transition: $transition;
 
   &:hover {
     background-color: $additional-blue-02;
