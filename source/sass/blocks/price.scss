@@ -3,7 +3,7 @@
 }
 
 .price__inner-wrap {
-  padding: 40px 0 40px 0;
+  padding: 40px 0 41px 0;
   position: relative;
   overflow: hidden;
   @include vp-768 {
@@ -70,7 +70,7 @@
   font-weight: 400;
   font-size: 16px;
   position: relative;
-  line-height: 100%;
+  line-height: 99%;
   color: rgba($primary, .5);
   border: none;
   border-bottom: 1px solid transparent;
@@ -134,7 +134,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -3px;
+      bottom: -2px;
       left: 0;
       width: 100%;
       border-bottom: 2px solid $red-01;
@@ -164,7 +164,7 @@
       position: absolute;
       background-image: url("../../img/inventory-tablet@1x.png");
       background-repeat: no-repeat;
-      bottom: -49px;
+      bottom: -47px;
       z-index: -1;
       left: 314px;
       transform: rotate(150deg);

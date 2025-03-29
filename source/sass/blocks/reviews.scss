@@ -1,5 +1,5 @@
 .reviews {
-  padding: 40px 0 40px 0;
+  padding: 42px 0 40px 0;
 
   @include vp-768 {
     padding: 60px 0 60px 0;
@@ -65,7 +65,7 @@
 }
 
 .reviews__slider-item {
-  padding: 30px 25px;
+  padding: 29px 25px;
   background-color: $additional-blue-02;
   display: flex;
   flex-direction: column;
@@ -78,7 +78,7 @@
   @include vp-768 {
     gap: 40px;
     align-items: flex-start;
-    padding: 39px 30px;
+    padding: 40px 30px;
   }
 
   @include vp-1366 {
@@ -90,13 +90,12 @@
   img {
     display: inline-flex;
     border-radius: 100%;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
   }
 
   h3 {
     @include title(18px,400,111%);
-    margin: 0 0 16px 0;
-
+    margin: 0 0 17px 0;
     @include vp-768 {
       text-align: left;
       font-size: 22px;
@@ -136,6 +135,7 @@
 }
 
 .reviews__slider-item.swiper-slide {
+  display: flex;
   @include vp-768 {
     display: flex;
     flex-direction: row;
@@ -145,8 +145,8 @@
 
   @include vp-768 {
     top: 64%;
-    width: 92%;
-    left: 4%;
+    width: 712px;
+    left: 28px;
   }
 
   @include vp-1366 {

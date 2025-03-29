@@ -1,4 +1,5 @@
 .faq {
+  background-color: #F8F9FC;
   padding: 70px 0 70px 0;
 
   @include vp-768 {
@@ -28,13 +29,13 @@
 
   @include vp-768 {
     font-size: 42px;
-    margin: 0 0 45px 0;
+    margin: 2px 0 43px 0;
   }
 
   @include vp-1366 {
     text-align: left;
     font-size: 54px;
-    margin: 0 0 50px 0;
+    margin: 0px 0 50px 0;
     grid-column: 1 / -1;
   }
 }
@@ -47,7 +48,7 @@
 
   @include vp-768 {
     grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 45px;
+    margin-bottom: 46px;
   }
 
   @include vp-1366 {
@@ -55,7 +56,7 @@
     grid-template-rows: repeat(4, 54px);
     justify-items: start;
     justify-items: start;
-    margin: 0;
+    margin: 1px 0 0 0;
   }
 }
 
@@ -95,9 +96,9 @@
   }
 
   &--current {
-    color: $absolute-white;
-    background-image: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
-    border-image-source: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
+    color: #FFFFFF;
+    background-image: linear-gradient(100deg, #ed0233 20%, #003eb7 100%);
+    border-image-source: linear-gradient(100deg, #ed0233 20%, #003eb7 100%);
     border-image-slice: 1;
   }
 }
@@ -110,15 +111,24 @@
 .faq__content-item {
   position: relative;
   text-align: left;
-  border-top: 1px solid #74819c;
+  box-shadow: 0  1px 0 0 #74819c;
+
+
   list-style: none;
-  padding: 20px 0 20px 0;
+  padding: 21px 0 20px 0;
+
+  &:first-child {
+    box-shadow: 0 -1px 0 0 #74819c,
+    0  1px 0 0 #74819c;
+  }
 
   &:last-child {
-    border-bottom: 1px solid #74819C;
+    box-shadow: 
+   
+    0  1px 0 0 #74819c;
 
     @include vp-768 {
-      padding: 23px 0 23px 0;
+      padding: 23px 0 24px 0;
 
       br {
         display: block;
@@ -126,7 +136,7 @@
     }
 
     @include vp-1366 {
-      padding: 30px 0 30px 0;
+      padding: 30px 0 32px 0;
       br {
         display: none;
       }
@@ -134,20 +144,20 @@
   }
 
   @include vp-768 {
-        padding: 32px 0 32px 0;
+        padding: 33px 0 33px 0;
   }
 
   @include vp-1366 {
-    padding: 30px 0 30px 0;
+    padding: 31px 0 32px 0;
   }
 
   &--active {
     @include vp-768 {
-      padding: 32px 0 23px 0;
+      padding: 31px 0 23px 0;
     }
 
     @include vp-1366 {
-      padding: 29px 0 23px 0;
+      padding: 31px 0 21px 0;
     }
 
     p {
@@ -157,6 +167,17 @@
         margin: 32px 0 0 0;
       }
     }
+  }
+
+  &--png {
+    @include vp-768 {
+      padding: 33px 0 32px 0;
+    }
+
+    @include vp-1366 {
+      padding: 30px 0 33px 0;
+    }
+    
   }
 
   h3 {
@@ -169,11 +190,14 @@
       max-width: calc(678px - 40px);
       font-weight: 400;
       font-size: 22px;
+      line-height: 102%;
+      margin: 2px 0 -3px 0px;
     }
 
     @include vp-1366 {
       max-width: calc(860px - 40px);
       font-size: 24px;
+      line-height: 101%;
     }
 
     br {
@@ -192,7 +216,7 @@
     @include vp-768 {
       width: 559px;
       font-size: 18px;
-      line-height: 133%;
+      line-height: 134%;
     }
 
     @include vp-1366 {
@@ -209,7 +233,7 @@
 
 .faq__accordion-button {
   position: absolute;
-  top: 25px;
+  top: 27px;
   right: 0;
   width: 30px;
   height: 30px;
@@ -242,7 +266,7 @@
   @include vp-768 {
     width: 40px;
     height: 40px;
-    top: 23px;
+    top: 24px;
   }
 
   &::after,
@@ -268,6 +292,10 @@
   &--active {
     background-color: $additional-blue-02;
 
+    @include vp-768 {
+      top:23px;
+    }
+
     &::before,
     &::after {
       background-color: $absolute-white;
@@ -279,10 +307,10 @@
   }
 
   &--crct-position {
-    top: 35px;
+    top: 37px;
 
     @include vp-768 {
-      top: 24px;
+      top: 25px;
     }
   }
 }
