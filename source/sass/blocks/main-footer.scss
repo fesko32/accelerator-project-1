@@ -9,8 +9,7 @@
   }
 
   @include vp-1366 {
-    padding: 35px 0 36px 0;
-    
+    padding: 35px 0 36px;
   }
 }
 
@@ -24,7 +23,7 @@
 
 .main-footer__logo {
   display: inline-flex;
-  margin: 0 0 30px 0;
+  margin: 0 0 30px;
 
   svg {
     @include vp-768 {
@@ -44,7 +43,7 @@
 }
 
 .main-footer__list {
-  margin: 0 0 28px 0;
+  margin: 0 0 28px;
   padding: 0;
   display: flex;
   gap: 36px;
@@ -71,16 +70,14 @@
   @include vp-768 {
     position: relative;
     left: 1px;
-
   }
 
   @include vp-1366 {
-    left: 0px;
+    left: 0;
   }
 }
 
 .main-footer__link {
-  font-weight: 400;
   color: $absolute-white;
   text-decoration: none;
   position: relative;
@@ -106,7 +103,7 @@
   &:focus {
     padding: 5px 10px;
     outline: 1px solid $absolute-white;
-    margin: -5px -10px -5px -10px;
+    margin: -5px -10px;
 
     &::after {
       display: none;
@@ -123,10 +120,6 @@
     }
   }
 
-  @include vp-768 {
-  }
-
-
   @include vp-1366 {
     line-height: 157%;
   }
@@ -136,7 +129,7 @@
 
     &:hover::after {
       display: none;
-      }
+    }
 
 
     &:focus {
@@ -155,17 +148,19 @@
     gap: 15px;
     align-items: center;
     line-height: 157%;
-    margin: 1px 0 0 0;
+    margin: 1px 0 0;
   }
 
   @include vp-1366 {
     gap: 10px;
-    margin: -1px 0 0 0;
+    margin: -1px 0 0;
   }
 }
+
 .main-footer__item-social {
   list-style: none;
 }
+
 .main-footer__social-link {
   display: flex;
   align-items: center;
@@ -177,11 +172,12 @@
   transition: $transition;
 
   svg {
-    fill: #030A1A;
+    fill: #030a1a;
   }
 
   &:hover {
-    background-color: #74819C;
+    background-color: #74819c;
+
     svg {
       fill: $absolute-white;
     }
@@ -190,6 +186,7 @@
   &:focus {
     outline: none;
     background-color: $additional-blue-01;
+
     svg {
       fill: $absolute-white;
     }
@@ -200,21 +197,23 @@
   }
 
   &--disabled {
-    background-color: rgba($absolute-white, .3);
+    background-color: rgba($absolute-white, 0.3);
 
     &:hover {
-      background-color: rgba($absolute-white, .3);
-      svg {
-        fill: #030A1A;
-      }
+      background-color: rgba($absolute-white, 0.3);
+    }
+
+    &:hover svg {
+      fill: #030a1a;
     }
 
     &:focus {
       outline: none;
-      background-color: rgba($absolute-white, .3);
-      svg {
-        fill: #030A1A;
-      }
+      background-color: rgba($absolute-white, 0.3);
+    }
+
+    &:focus svg {
+      fill: #030a1a;
     }
   }
 }

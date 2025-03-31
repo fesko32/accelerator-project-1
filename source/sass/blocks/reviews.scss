@@ -1,12 +1,12 @@
 .reviews {
-  padding: 42px 0 40px 0;
+  padding: 42px 0 40px;
 
   @include vp-768 {
-    padding: 60px 0 60px 0;
+    padding: 60px 0;
   }
 
   @include vp-1366 {
-    padding: 100px 0 100px 0;
+    padding: 100px 0;
   }
 }
 
@@ -26,6 +26,7 @@
 
 .reviews__title {
   @include title(32px,600,100%);
+
   font-family: $primary-font;
   margin: 0 0 40px;
 
@@ -35,7 +36,7 @@
   }
 
   @include vp-1366 {
-    margin: 0 0 75px 0;
+    margin: 0 0 75px;
   }
 }
 
@@ -74,7 +75,6 @@
   box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
 
 
-
   @include vp-768 {
     gap: 40px;
     align-items: flex-start;
@@ -95,11 +95,13 @@
 
   h3 {
     @include title(18px,400,111%);
-    margin: 0 0 17px 0;
+
+    margin: 0 0 17px;
+
     @include vp-768 {
       text-align: left;
       font-size: 22px;
-      margin: 0 0 19px 0;
+      margin: 0 0 19px;
     }
   }
 
@@ -131,18 +133,18 @@
 .reviews__slider-list.swiper-wrapper {
   display: flex;
   justify-content: flex-start;
-
 }
 
 .reviews__slider-item.swiper-slide {
   display: flex;
+
   @include vp-768 {
     display: flex;
     flex-direction: row;
   }
 }
-.reviews__button-wrap {
 
+.reviews__button-wrap {
   @include vp-768 {
     top: 64%;
     width: 712px;

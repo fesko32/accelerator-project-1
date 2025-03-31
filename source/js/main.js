@@ -3,6 +3,9 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import './lazy-video-loader.js';
+import './tabs.js';
+import './validate-form.js';
 
 const swiper = new Swiper('.juri__slider-wrap', {
   modules: [Navigation],
@@ -21,11 +24,11 @@ const swiper = new Swiper('.juri__slider-wrap', {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 40 // На планшетах можно показать часть следующего слайда
+      spaceBetween: 40
     },
     1366: {
       slidesPerView: 4,
-      spaceBetween: 40 // На десктопах
+      spaceBetween: 40
     }
   },
 });
@@ -56,7 +59,4 @@ const swiper2 = new Swiper('.reviews__slider-wrap', {
     }
   }
 });
-
-
-swiper();
-swiper2();
+export { swiper, swiper2 };

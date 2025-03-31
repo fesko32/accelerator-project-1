@@ -17,17 +17,18 @@
 .hero__header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 15px 0 16px 0;
-  margin: 0px 0 49px 0;
+  padding: 15px 0 16px;
+  margin: 0 0 49px;
 
   @include vp-768 {
-    padding: 30px 0 30px 0;
+    padding: 30px 0;
     margin: 0;
   }
 
   @include vp-1366 {
-    margin: 0 0 30px 0;
+    margin: 0 0 30px;
   }
 }
 
@@ -49,7 +50,7 @@
 
   &:hover {
     svg {
-      opacity: .4;
+      opacity: 0.4;
     }
   }
 }
@@ -64,7 +65,7 @@
   line-height: 100%;
   position: relative;
 
-  &::after  {
+  &::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -76,7 +77,7 @@
   }
 
   &:hover {
-    color: rgba($additional-blue-02, .5);
+    color: rgba($additional-blue-02, 0.5);
   }
 
   &:focus {
@@ -88,28 +89,28 @@
     color: $primary;
   }
 
-  &:active::after  {
-      display: block;
+  &:active::after {
+    display: block;
   }
 
   &--disabled {
-    color: rgba(#F8F9FC, .5);
+    color: rgba(#f8f9fc, 0.5);
 
     &:hover {
-      color: rgba(#F8F9FC, .5);
+      color: rgba(#f8f9fc, 0.5);
     }
 
     &:focus {
       outline: none;
-      color: rgba(#F8F9FC, .5);
+      color: rgba(#f8f9fc, 0.5);
     }
 
     &:active {
-      color: rgba(#F8F9FC, .5);
+      color: rgba(#f8f9fc, 0.5);
     }
 
-    &:active::after  {
-        display: none;
+    &:active::after {
+      display: none;
     }
   }
 
@@ -127,35 +128,38 @@
 .hero__paragraph {
   color: $absolute-white;
   margin: 0 0 14px;
+
   @include title(32px,600,100%);
+
   font-family: $primary-font;
   align-self: flex-end;
   justify-self: flex-end;
 
   @include vp-768 {
-    margin: 0 1px 10px 0px;
+    margin: 0 1px 10px 0;
     font-size: 42px;
   }
 
   @include vp-1366 {
     font-size: 54px;
-    margin: 0px 0 40px 0;
+    margin: 0 0 40px;
   }
 }
 
 .hero__title {
   @include title(62px,800,100%);
+
   font-family: $primary-font;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   color: $absolute-white;
-  margin: 0 -2px 0px 0px;
+  margin: 0 -2px 0 0;
 
   @include vp-768 {
     font-size: 72px;
     line-height: 118%;
     margin: 0;
-    letter-spacing: 0.024em;
+    letter-spacing: 0.02em;
   }
 
   @include vp-1366 {
@@ -222,7 +226,7 @@
   width: 100%;
   padding-top: 22px;
   padding-bottom: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -237,16 +241,14 @@
     grid-column: 2 / -1;
     align-self: start;
     justify-self: end;
-    margin-right: 1px;
-    margin-top: 50px;
     margin: 50px 1px 0 0;
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
   }
 
   @include vp-1366 {
     margin-top: 40px;
     width: 100%;
-    padding: 25px 0 25px 0;
+    padding: 25px 0;
     justify-self: flex-start;
   }
 }
@@ -274,4 +276,3 @@
     padding: 0 72px 0 147px;
   }
 }
-

@@ -4,7 +4,8 @@
   outline: none;
   transition: $transition;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $additional-blue-01;
     background-color: $absolute-white;
     border-color: transparent;
@@ -19,8 +20,6 @@
     color: $primary;
     border-color: transparent;
     background-color: $absolute-white;
-
-
   }
 
   &--disabled {

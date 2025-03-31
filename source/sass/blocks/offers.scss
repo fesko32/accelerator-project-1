@@ -1,12 +1,12 @@
 .offers {
-  padding: 40px 0 40px 0;
+  padding: 40px 0;
 
   @include vp-768 {
-    padding: 60px 0 60px 0;
+    padding: 60px 0;
   }
 
   @include vp-1366 {
-    padding: 100px 0 100px 0;
+    padding: 100px 0;
   }
 }
 
@@ -21,10 +21,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  @include vp-1366 {
-
   }
 }
 
@@ -62,24 +58,25 @@
 
 .offers__title {
   @include title (32px,600,101%);
+
   font-family: $primary-font;
-  margin: 0 0 40px 0;
+  margin: 0 0 40px;
 
   @include vp-768 {
     font-size: 42px;
-    margin: 0 0 35px 0;
+    margin: 0 0 35px;
     grid-column: 1 / -1;
     text-align: center;
   }
 
   @include vp-1366 {
     font-size: 54px;
-    margin: 0 0 70px 0;
+    margin: 0 0 70px;
   }
 }
 
 .offers__text-area {
-  padding: 30px 0 36px 0;
+  padding: 30px 0 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +93,7 @@
   }
 
   h3 {
-    margin: 0 0 9px 0;
+    margin: 0 0 9px;
     font-weight: 700;
     font-size: 22px;
     line-height: 100%;
@@ -106,33 +103,33 @@
       margin: 0 0 20px 1px;
     }
   }
+
   span {
-    margin: 0 0 28px 0;
+    margin: 0 0 28px;
     font-weight: 700;
     font-size: 64px;
     line-height: 100%;
 
     @include vp-768 {
-      margin: 0 0 40px 0px;
+      margin: 0 0 40px;
       font-size: 70px;
     }
   }
+
   p {
     width: 260px;
-    margin: 0 0 28px 0;
+    margin: 0 0 28px;
     font-size: 16px;
     line-height: 125%;
 
     @include vp-768 {
       width: auto;
-      margin: 0 0 auto 0;
+      margin: 0 0 auto;
       font-size: 18px;
       line-height: 133%;
       text-align: left;
     }
   }
-
-
 }
 
 .offers__link {
@@ -159,25 +156,25 @@
     left: 0;
 
     @include vp-768 {
-      bottom: 0px;
+      bottom: 0;
     }
   }
 
   &:hover {
-    color: rgba($absolute-white, .8);
+    color: rgba($absolute-white, 0.8);
 
     &::after {
-      background-color: rgba($absolute-white, .8);
+      background-color: rgba($absolute-white, 0.8);
     }
   }
 
   &:focus {
     padding: 10px;
     outline: 1px solid $absolute-white;
-    margin: -10px 0px -10px 0px;
-    @include vp-768 {
-      margin: 0px 0px -5px -10px;
+    margin: -10px 0;
 
+    @include vp-768 {
+      margin: 0 0 -5px -10px;
     }
 
     &::after {
@@ -188,7 +185,7 @@
 
   &:active {
     outline: none;
-    padding: 0 0 5px 0;
+    padding: 0 0 5px;
     margin: 0;
 
     &::after {
@@ -198,30 +195,30 @@
   }
 
   &--disabled {
-    color: rgba($absolute-white, .5);
+    color: rgba($absolute-white, 0.5);
+  }
 
-    &:hover {
-      color: rgba($absolute-white, .5);
-    }
+  &--disabled:hover {
+    color: rgba($absolute-white, 0.5);
+  }
 
-    &:hover::after {
-      background-color: rgba($absolute-white, .5);
-    }
+  &--disabled:hover::after {
+    background-color: rgba($absolute-white, 0.5);
+  }
 
-    &:focus {
-      outline: none;
-      color: rgba($absolute-white, .5);
-      padding: 0 0 5px 0;
-    }
+  &--disabled:focus {
+    outline: none;
+    color: rgba($absolute-white, 0.5);
+    padding: 0 0 5px;
+  }
 
-    &:focus::after {
-      display: block;
-      background-color: rgba($absolute-white, .5);
-    }
+  &--disabled:focus::after {
+    display: block;
+    background-color: rgba($absolute-white, 0.5);
+  }
 
-    &::after {
-      background-color: rgba($absolute-white, .5);
-    }
+  &--disabled::after {
+    background-color: rgba($absolute-white, 0.5);
   }
 }
 
@@ -233,6 +230,7 @@
     margin: 0;
   }
 }
+
 .offers__list {
   margin: 0;
   padding: 0 15px;
@@ -253,6 +251,7 @@
     align-self: end;
   }
 }
+
 .offers__item {
   padding: 20px;
   list-style: none;
@@ -271,20 +270,22 @@
 
   @include vp-1366 {
     width: 560px;
-    min-height: 174px
+    min-height: 174px;
   }
 
   h3 {
     @include title(22px,700,100%);
-    margin: 0 0 20px 0;
+
+    margin: 0 0 20px;
 
     @include vp-768 {
       font-size: 26px;
       margin: 0 0 10px;
     }
   }
+
   p {
-    margin: 0 0 18px 0;
+    margin: 0 0 18px;
 
     @include vp-768 {
       margin: 0 0 auto;
@@ -315,7 +316,7 @@
     position: absolute;
     width: 100%;
     height: 1px;
-    background-color: #74819C;
+    background-color: #74819c;
     bottom: -3px;
     left: 0;
 
@@ -325,20 +326,20 @@
   }
 
   &:hover {
-    color: rgba($additional-blue-02, .8);
+    color: rgba($additional-blue-02, 0.8);
 
     &::after {
-      background-color: rgba($additional-blue-02, .8);
+      background-color: rgba($additional-blue-02, 0.8);
     }
   }
 
   &:focus {
     padding: 10px;
     outline: 1px solid $additional-blue-02;
-    margin: -10px 0px -10px 0px;
+    margin: -10px 0;
 
     @include vp-768 {
-      margin: 0px 0px -5px -10px;
+      margin: 0 0 -5px -10px;
     }
 
     &::after {
@@ -348,7 +349,7 @@
 
   &:active {
     outline: none;
-    padding: 0 0 5px 0;
+    padding: 0 0 5px;
     margin: 0;
 
     &::after {
@@ -358,32 +359,29 @@
   }
 
 
-
-
-
   &--disabled {
-    color: rgba($additional-blue-02, .3);
+    color: rgba($additional-blue-02, 0.3);
+  }
 
-    &:hover {
-      color: rgba($additional-blue-02, .3);
-    }
+  &--didabled:hover {
+    color: rgba($additional-blue-02, 0.3);
+  }
 
-    &:hover::after {
-      background-color: rgba($additional-blue-02, .3);
-    }
+  &--didabled:hover::after {
+    background-color: rgba($additional-blue-02, 0.3);
+  }
 
-    &:focus {
-      outline: none;
-      padding: 0 0 5px 0;
-    }
+  &--didabled:focus {
+    outline: none;
+    padding: 0 0 5px;
+  }
 
-    &:focus::after {
-      display: block;
-      background-color: rgba($additional-blue-02, .3);
-    }
+  &--didabled:focus::after {
+    display: block;
+    background-color: rgba($additional-blue-02, 0.3);
+  }
 
-    &::after {
-      background-color: rgba($additional-blue-02, .3);
-    }
+  &--didabled::after {
+    background-color: rgba($additional-blue-02, 0.3);
   }
 }

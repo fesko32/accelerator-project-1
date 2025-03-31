@@ -1,6 +1,5 @@
 .button-primary {
   display: block;
-  color: $primary;
   font-weight: 700;
   font-size: 12px;
   line-height: 100%;
@@ -31,7 +30,7 @@
     background-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
     border-image-source: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
     border-image-slice: 1;
-    color: rgba($absolute-white, .7)
+    color: rgba($absolute-white, 0.7);
   }
 
   &--disabled {
