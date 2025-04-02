@@ -1,0 +1,334 @@
+.price {
+  background-color: $additional-white;
+}
+
+.price__inner-wrap {
+  padding: 40px 0 41px;
+  position: relative;
+  overflow: hidden;
+
+  @include vp-768 {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  @include vp-1366 {
+    padding: 100px 0;
+  }
+}
+
+.price__subscriptions {
+  padding: 0 15px;
+
+  @include vp-768 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.price__title {
+  @include title(32px,600, 100%);
+
+  text-align: center;
+  font-family: $primary-font;
+  margin: 0 0 32px;
+
+  @include vp-768 {
+    font-size: 42px;
+    margin: 0 0 37px;
+  }
+
+  @include vp-1366 {
+    font-size: 54px;
+    margin: 0 0 20px;
+  }
+}
+
+.price__subscriptions-tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(#787878, 0.2);
+  margin: 0 auto 30px;
+  width: 290px;
+
+  @include vp-768 {
+    width: 310px;
+    margin: 0 0 45px;
+  }
+
+  @include vp-1366 {
+    width: 350px;
+    margin: 0 0 40px;
+  }
+}
+
+.price__subscriptions-tab {
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+  line-height: 99%;
+  color: rgba($primary, 0.5);
+  border: none;
+  padding: 0 1px 6px 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: $transition;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+  }
+
+  @include vp-768 {
+    font-size: 18px;
+  }
+
+  @include vp-1366 {
+    font-size: 20px;
+  }
+
+  &:hover {
+    color: rgba($primary, 0.7);
+
+    &::after {
+      background-color: rgba($primary, 0.7);
+    }
+  }
+
+  &:focus {
+    color: $primary;
+    outline: none;
+
+    &::after {
+      background-color: $primary;
+    }
+  }
+
+  &:disabled {
+    color: rgba($primary, 0.3);
+
+    &::after {
+      background-color: rgba($primary, 0.3);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: rgba($primary, 0.3);
+
+      &::after {
+        background-color: rgba($primary, 0.3);
+      }
+    }
+  }
+
+  &--current {
+    color: $primary;
+  }
+
+  &--current::after {
+    background-color: $red-01;
+  }
+
+  &--current:hover {
+    color: $primary;
+  }
+
+  &--current:hover::after,
+  &--current:focus::after,
+  &--current:active::after {
+    background-color: $red-01;
+  }
+}
+
+.price__subscriptions-cards {
+  display: none;
+  gap: 35px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+
+
+  &::after {
+    @include vp-768 {
+      content: "";
+      display: block;
+      width: 275px;
+      height: 328px;
+      position: absolute;
+      background-image: url("../../img/inventory-tablet@1x.png");
+      background-repeat: no-repeat;
+      bottom: -47px;
+      z-index: -1;
+      left: 314px;
+      background-size: contain;
+      transform: rotate(150deg);
+
+      @media (resolution >= 2dppx) {
+        width: 275px;
+        height: 328px;
+        background-image: url("../../img/inventory-tablet@2x.png");
+      }
+    }
+
+
+    @include vp-1366 {
+      width: 321px;
+      height: 387px;
+      background-image: url("../../img/inventory-desktop@1x.png");
+      bottom: -93px;
+      z-index: -1;
+      right: -196px;
+      left: auto;
+
+      @media (resolution >= 2dppx) {
+        width: 321px;
+        height: 387px;
+        background-image: url("../../img/inventory-desktop@2x.png");
+      }
+    }
+  }
+
+  @include vp-768 {
+    gap: 40px;
+  }
+
+  @include vp-1366 {
+    flex-direction: row;
+  }
+}
+
+.price__subscriptions-cards.is-active {
+  display: flex;
+}
+
+.price__subscriptions-card {
+  padding: 43px 34px 42px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $absolute-white;
+  border: 7px solid transparent;
+  transition: $transition;
+
+  @include vp-768 {
+    width: 380px;
+    padding: 58px;
+  }
+
+  @include vp-1366 {
+    width: 360px;
+  }
+
+  &:focus {
+    border: 7px solid;
+  }
+
+  &:hover,
+  &:focus {
+    border: 7px solid;
+    border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+    border-image-slice: 1;
+  }
+}
+
+
+.price__subscriptions-title {
+  @include title(22px,700,100%);
+
+  margin: 0 0 18px;
+
+  @include vp-768 {
+    font-size: 24px;
+    margin: 0 0 23px;
+  }
+
+  @include vp-1366 {
+    font-size: 26px;
+    margin: 0 0 18px;
+  }
+}
+
+.price__subscriptions-schedule {
+  margin: 0 0 18px;
+
+  @include vp-768 {
+    font-size: 16px;
+  }
+
+  @include vp-1366 {
+    margin: 0 0 17px;
+  }
+}
+
+.price__subscriptions-price {
+  position: relative;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  margin: 0 0 19px;
+  padding: 47px 0 0;
+  color: $additional-blue-01;
+  z-index: 1;
+
+  @include vp-768 {
+    font-size: 60px;
+    margin: 0 0 21px;
+    padding: 66px 0 0;
+  }
+
+  @include vp-1366 {
+    margin: 0 0 17px;
+    padding: 62px 0 0;
+  }
+
+  svg {
+    @include vp-768 {
+      width: 30px;
+      height: 42px;
+    }
+  }
+}
+
+.price__subscriptions-element {
+  position: absolute;
+  top: 0;
+  right: -14px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 150%;
+  color: rgba(#e8e8e8, 0.48);
+  z-index: -1;
+
+  @include vp-768 {
+    font-size: 100px;
+    left: -19px;
+    right: 0;
+    top: 6px;
+  }
+}
+
+.price__subscriptions-button {
+  text-decoration: none;
+  padding: 25px 48px 25px 47px;
+
+  @include vp-768 {
+    width: 100%;
+  }
+}

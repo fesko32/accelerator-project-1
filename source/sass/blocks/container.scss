@@ -1,0 +1,15 @@
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include vp-768 {
+    width: $tablet-width;
+    padding: 0 45px;
+  }
+
+  @include vp-1366 {
+    width: $desktop-width;
+    padding: 0 103px;
+  }
+}

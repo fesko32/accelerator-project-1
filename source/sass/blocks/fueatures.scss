@@ -1,0 +1,269 @@
+.features {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f8f9fc;
+
+  @include vp-768 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include vp-1366 {
+    padding: 100px 0;
+  }
+}
+
+.features__inner-wrap {
+  width: 100%;
+  padding: 0;
+
+  @include vp-768 {
+    padding: 0 45px;
+  }
+
+  @include vp-768 {
+    width: auto;
+  }
+}
+
+.features__title {
+  @include title(32px,600,100%);
+
+  font-family: $primary-font;
+  text-align: center;
+  margin: 0 0 40px;
+
+  @include vp-768 {
+    font-size: 42px;
+    margin: 0 0 50px;
+  }
+
+  @include vp-1366 {
+    font-size: 54px;
+  }
+}
+
+.features__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 1fr;
+
+  @include vp-768 {
+    grid-template-columns: repeat(2, 324px);
+    grid-template-rows: repeat(3, max-content);
+    justify-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 42px;
+  }
+
+  @include vp-1366 {
+    grid-template-columns: auto 360px auto;
+    grid-template-rows: min-content min-content;
+    column-gap: 40px;
+    row-gap: 80px;
+  }
+}
+
+.features__item {
+  margin-bottom: 35px;
+  text-align: center;
+  list-style: none;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: min-content min-content;
+    column-gap: 15px;
+    margin: 0;
+    text-align: left;
+  }
+
+  @include vp-1366 {
+    grid-template-columns: 107px 210px;
+    grid-template-rows: min-content min-content;
+    column-gap: 43px;
+  }
+
+  b {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    margin: 0;
+    background: linear-gradient(128deg, #d10a42 0%, #0041ca 45.58%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include vp-768 {
+      font-size: 70px;
+    }
+  }
+
+  span {
+    display: block;
+    margin: 0 0 12px;
+    font-weight: 400;
+    line-height: 143%;
+    color: #2e35ac;
+
+    @include vp-768 {
+      margin: 0;
+    }
+  }
+
+  h3 {
+    @include title(18px, 400, 111%);
+
+    margin: 0 0 12px;
+
+    @include vp-768 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    @include vp-1366 {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    padding: 0 45px;
+    margin: 0;
+
+    @include vp-768 {
+      grid-column: 2 / -1;
+      padding: 0;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &--squar p {
+    @include vp-1366 {
+      padding: 0 0 6px;
+    }
+  }
+
+  &--comfort p {
+    @include vp-1366 {
+      padding: 0 0 7px;
+    }
+  }
+
+  &--parking p {
+    @include vp-1366 {
+      width: 189px;
+      margin: 4px 0 -4px;
+    }
+  }
+
+  &--experienc p {
+    @include vp-1366 {
+      margin: 4px 0 -4px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.features__item--modif {
+  padding: 30px 0 40px;
+  margin: 5px 0 40px;
+  color: $absolute-white;
+  background-color: $additional-blue-02;
+
+  @include vp-768 {
+    width: 320px;
+    margin: 0;
+    padding: 33px 0 35px;
+    grid-column: 1 / -1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include vp-1366 {
+    width: 360px;
+    padding: 58px 40px;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
+
+  p {
+    padding: 0 67px;
+
+    @include vp-768 {
+      text-align: center;
+    }
+
+    @include vp-1366 {
+      width: 280px;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  b {
+    background: none;
+    margin: 0 0 5px;
+    -webkit-text-fill-color: $absolute-white;
+
+    @include vp-768 {
+      margin: 0 0 25px;
+    }
+
+    @include vp-1366 {
+      margin: 0 0 10px;
+    }
+  }
+
+  span {
+    display: block;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    margin: 0 0 20px;
+    color: $absolute-white;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    margin: 0 0 20px;
+
+    @include vp-768 {
+      font-size: 24px;
+      margin: 0 0 25px;
+    }
+
+    @include vp-1366 {
+      font-size: 26px;
+      margin: 0 0 30px;
+    }
+  }
+
+  .features__numbers-wrap {
+    @include vp-768 {
+      align-items: center;
+    }
+
+    @include vp-1366 {
+      grid-row: 1 / -1;
+    }
+  }
+}
+
+.features__numbers-wrap {
+  @include vp-768 {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    grid-row: 1 / -1;
+  }
+}

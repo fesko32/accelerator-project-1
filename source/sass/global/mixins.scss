@@ -1,0 +1,21 @@
+@mixin title($size, $weight, $lineHeigh...) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+
+  line-height: $lineHeigh;
+}
+
+@mixin vp-768 {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+
+@mixin vp-1366 {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
