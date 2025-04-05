@@ -66,6 +66,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
+  color: $primary;
   background-color: transparent;
   border: 1px solid rgba($primary, 0.2);
   cursor: pointer;
@@ -294,7 +295,7 @@
   background-color: $additional-blue-02;
 
   @include vp-768 {
-    top: 23px;
+    top: 24px;
   }
 
   &::before,
