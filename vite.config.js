@@ -61,9 +61,10 @@ export default {
     devSourcemap: true
   },
   publicDir: 'public',
-  root: './source',
+  root: 'source',
   build: {
     outDir: '../dist',
+    emptyOutDir: true
   },
   base: './',
   server: {
